@@ -92,6 +92,8 @@
 
 10. git push origin : 将暂存区的内容提交到远程仓库
 
+10. git remote rm origin : 删除远程库
+
     
 
     
