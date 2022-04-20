@@ -1,0 +1,89 @@
+.register {
+    position: absolute;
+    top: 45%;
+    right: 50%;
+    width: 450px;
+    height: 400px;
+    transform: translate(50%, -50%);
+    background-color: white;
+    display: none;
+}
+
+.register_title {
+    margin: auto auto;
+    width: 400px;
+    height: 70px;
+    border-bottom: 1px solid gray;
+}
+
+.register_title>strong {
+    font-family: "Microsoft YaHei", 微软雅黑;
+    width: 100px;
+    height: 70px;
+    display: block;
+    line-height: 70px;
+    font-size: 16px;
+}
+
+.register_personMessage_username,
+.register_personMessage_email {
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin: 20px auto;
+    outline: 0px;
+    border-style: none;
+    border-bottom: 1px solid gray;
+    text-indent: 5px;
+    font-size: 15px;
+}
+
+.register_personMessage_password,
+.register_personMessage_password1 {
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin: 20px auto;
+    outline: 0px;
+    border-style: none;
+    border-bottom: 1px solid gray;
+    text-indent: 5px;
+    font-size: 15px;
+}
+
+.register_personMessage_password_close,
+.register_personMessage_password_close1 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top: -60px;
+    right: 25px;
+    border: 0px;
+    background: url(../image/closeeye.png);
+}
+
+.register_personMessageButton {
+    width: 400px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    left: 50%;
+    border-radius: 50px;
+    border: 0;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+
+.register_returnLogin {
+    position: inherit;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 10px;
+    height: 50px;
+    line-height: 50px;
+}

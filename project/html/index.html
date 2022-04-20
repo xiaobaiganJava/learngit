@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/changePassword.css">
+</head>
+
+<body>
+    <!-- html部分 -->
+    <div class="login_background">
+        <div class="login">
+            <a href="#" class="login_close"></a>
+            <div class="login_title">
+                <ul>
+                    <li class="current">用户名登录</li>
+                    <li>邮箱登录</li>
+                </ul>
+            </div>
+            <div class="login_personMessage">
+                <input class="login_personMessage_username" type="text" placeholder="请输入用户名" id="username">
+                <input class="login_personMessage_password" type="password" placeholder="请输入密码" id="password">
+                <a href="#" class="login_personMessage_password_close"></a>
+                <a href="#" class="login_personMessage_password_forget">忘记密码？</a>
+                <button class="login_personMessageButton">登录</button>
+            </div>
+            <div class="login_personMessageEmail" style="display: none;">
+                <input class="login_personMessage_email" type="text" placeholder="请输入邮箱" id="email">
+                <input class="login_personMessage_password1" type="password" placeholder="请输入密码" id="password">
+                <a href="#" class="login_personMessage_password_close1"></a>
+                <a href="#" class="login_personMessage_password_forget1">忘记密码？</a>
+                <button class="login_personMessageButton1">登录</button>
+            </div>
+            <div class="login_returnRegister">
+                <a class="login_returnRegister_a" href="#" style="text-decoration: none; color: gray; margin-top: 0px;">还没创建账号，点击注册账号</a>
+            </div>
+        </div>
+        <div class="register">
+            <a href="#" class="login_close"></a>
+            <div class="register_title">
+                <strong>账号注册</strong>
+            </div>
+            <div class="register_personMessage">
+                <input class="register_personMessage_username" type="text" placeholder="请输入账号">
+                <input class="register_personMessage_email" type="text" placeholder="请输入邮箱">
+                <input class="register_personMessage_password" type="password" placeholder="请输入密码">
+                <a href="#" class="register_personMessage_password_close"></a>
+                <input class="register_personMessage_password1" type="password" placeholder="请再次输入密码">
+                <a href="#" class="register_personMessage_password_close1"></a>
+                <button class="register_personMessageButton">注册</button>
+            </div>
+            <div class="register_returnLogin">
+                <a class="register_returnLogin_a" href="#" style="text-decoration: none; color: gray;">返回账号登录</a>
+            </div>
+        </div>
+        <div class="changePassword" style="display: none;">
+            <a href="#" class="changePassword_close"></a>
+            <div class="changePassword_title">
+                <ul>
+                    <li class="changecurrent">旧密码修改</li>
+                    <li>验证码修改</li>
+                </ul>
+            </div>
+            <div class="changePassword_oldPasswordBox">
+                <input type="text" class="changePassword_oldPassword" placeholder="请输入旧密码">
+                <input type="text" class="changePassword_username" placeholder="请输入用户名">
+                <input type="text" class="changePassword_newPassword" placeholder="请输入新密码">
+                <button class="changePassword_button">确定修改</button>
+                <div class="changePassword_returnLogin">
+                    <a class="changePassword_returnLogin_a" href="#" style="text-decoration: none; color: gray;">返回账号登录</a>
+                </div>
+            </div>
+            <div class="changePassword_emailCode" style="display: none;">
+                <input type="text" class="changePassword_email" placeholder="请输入你的邮箱">
+                <input type="text" class="changePassword_code" placeholder="请输入验证码">
+                <button class="changePassword_getCode">获取验证码</button>
+                <input type="text" class="changePassword_newPassword1" placeholder="请输入新密码">
+                <button class="changePassword_button1">确定修改</button>
+                <div class="changePassword_returnLogin1">
+                    <a class="changePassword_returnLogin_a" href="#" style="text-decoration: none; color: gray;">返回账号登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/changePassword.js"></script>
+    <script src="../js/logAndReg.js"></script>
+    <script src="../js/ajaxFunction.js"></script>
+</body>
+
+</html>
