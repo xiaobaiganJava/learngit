@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/changePassword.css">
+    <link rel="stylesheet" href="../css/homepage.css">
 </head>
 
 <body>
@@ -47,9 +48,12 @@
                 <strong>账号注册</strong>
             </div>
             <div class="register_personMessage">
-                <input class="register_personMessage_username" type="text" placeholder="请输入账号">
+                <input class="register_personMessage_username" type="text" placeholder="请输入用户名">
+                <p class="register_usernameTips">用户名由数字、英文组成</p>
                 <input class="register_personMessage_email" type="text" placeholder="请输入邮箱">
+                <p class="register_emailTips">邮箱可为1234567890@xx.com形式</p>
                 <input class="register_personMessage_password" type="password" placeholder="请输入密码">
+                <p class="register_passwordTips">密码由数字、英文、特殊字符组成</p>
                 <a href="#" class="register_personMessage_password_close"></a>
                 <input class="register_personMessage_password1" type="password" placeholder="请再次输入密码">
                 <a href="#" class="register_personMessage_password_close1"></a>
@@ -87,7 +91,27 @@
                 </div>
             </div>
         </div>
+        <div class="homepage">
+            <div class="homepageBox">
+                <div class="homepage_userId"></div>
+                <div class="homepage_userEmail"></div>
+                <div class="homepage_userName"></div>
+            </div>
+            <div class="logOut">
+                <button>退出登录</button>
+            </div>
+            <div class="deleteUser">
+                <button>删除账号</button>
+            </div>
+            <div class="deleteBox">
+                <input type="text" class="deleteUsername" placeholder="请输入你要删除的用户名">
+                <input type="text" class="deleteEmail" placeholder="请输入你要删除的邮箱">
+                <input type="text" class="deletePassword" placeholder="请输入你要删除的密码">
+            </div>
+        </div>
     </div>
+
+    <script src="../js/homepage.js"></script>
     <script src="../js/changePassword.js"></script>
     <script src="../js/logAndReg.js"></script>
     <script src="../js/ajaxFunction.js"></script>

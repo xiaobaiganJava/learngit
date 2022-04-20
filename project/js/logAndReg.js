@@ -10,12 +10,12 @@ for (var i = 0; i < lis.length; i++) {
     lis[i].setAttribute('index', i);
     lis[i].onclick = function() {
         //排他思想 点击某个小li时 清除其他人的类名 并将current类名赋给点击的小li
-        for (let i = 0; i < lis.length; i++) {
+        for (var i = 0; i < lis.length; i++) {
             lis[i].className = '';
         }
         this.className = 'current'; //留下点击的小li
         //内容部分
-        let index = this.getAttribute('index');
+        var index = this.getAttribute('index');
         if (index == 0) {
             usernameLogin.style.display = 'block';
             emailLogin.style.display = 'none';
@@ -49,6 +49,10 @@ var register_personMessage_email = document.querySelector('.register_personMessa
 var login_personMessageButton = document.querySelector('.login_personMessageButton');
 var login_personMessageButton1 = document.querySelector('.login_personMessageButton1');
 var register_personMessageButton = document.querySelector('.register_personMessageButton');
+var homepage = document.querySelector('.homepage');
+var homepageUserId = document.querySelector('.homepage_userId');
+var homepageUserEmail = document.querySelector('.homepage_userEmail');
+var homepageUserName = document.querySelector('.homepage_userName');
 // 关闭登录注册页面
 login_close[0].onclick = function() {
     login_background.style.display = 'none';
@@ -87,7 +91,13 @@ register_personMessageButton.onclick = function() {
     var registerUsername = register_personMessage_username.value;
     var registerPassword = register_personMessage_password1.value;
     var registerEmail = register_personMessage_email.value;
-    // 将拿到的数据封装成json数组，
+    if (registerPassword.length != 0) { //密码限制位6-20位的数字和英文 不能有特殊字符
+        reg = /^(\w){6,20}$/;
+        if (!reg.test(registerPassword)) {
+            alert("对不起，您输入的密码格式不正确!")
+        }
+    }
+    // 将拿到的数据封装成json数组
     var registerUserJSON = {
         "username": registerUsername,
         "password": registerPassword,
@@ -97,7 +107,7 @@ register_personMessageButton.onclick = function() {
     var registerUserJSONString = JSON.stringify(registerUserJSON);
     // 上传到eolink
     var registerData = getJSON('POST', 'http://175.178.51.126:8091/smallA/register', registerUserJSONString).then(res => {
-        let tips = JSON.parse(res)
+        var tips = JSON.parse(res)
         console.log(res);
         if (tips.code > 400) {
             alert(tips.msg);
@@ -120,13 +130,14 @@ login_personMessageButton.onclick = function() {
     // 上传到eolink
     var loginUserJSONString = JSON.stringify(loginUserJSON);
     var loginData = getJSON('POST', 'http://175.178.51.126:8091/smallA/login', loginUserJSONString).then(res => {
-        let tips = JSON.parse(res)
+        var tips = JSON.parse(res)
         console.log(res);
-        if (tips.code > 400) {
-            alert(tips.msg);
-        } else {
-            alert('登录成功');
-            console.log(tips.msg);
+        if (tips.code === 200) {
+            login.style.display = 'none';
+            homepage.style.display = 'block';
+            homepageUserId.innerHTML = 'ID:' + tips.data.id;
+            homepageUserEmail.innerHTML = 'Email:' + tips.data.email;
+            homepageUserName.innerHTML = 'username:' + tips.data.username;
         }
     });
 }
@@ -143,13 +154,14 @@ login_personMessageButton1.onclick = function() {
     // 上传到eolink
     var loginUserJSONString = JSON.stringify(loginUserJSON);
     var loginData = getJSON('POST', 'http://175.178.51.126:8091/smallA/login', loginUserJSONString).then(res => {
-        let tips = JSON.parse(res)
+        var tips = JSON.parse(res)
         console.log(res);
-        if (tips.code > 400) {
-            alert(tips.msg);
-        } else {
-            alert('登录成功');
-            console.log(tips.msg);
+        if (tips.code === 200) {
+            login.style.display = 'none';
+            homepage.style.display = 'block';
+            homepageUserId.innerHTML = 'ID:' + tips.data.id;
+            homepageUserEmail.innerHTML = 'Email:' + tips.data.email;
+            homepageUserName.innerHTML = 'username:' + tips.data.username;
         }
     });
 }

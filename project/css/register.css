@@ -3,10 +3,31 @@
     top: 45%;
     right: 50%;
     width: 450px;
-    height: 400px;
+    height: 500px;
     transform: translate(50%, -50%);
     background-color: white;
     display: none;
+}
+
+.register_usernameTips,
+.register_passwordTips,
+.register_emailTips {
+    margin: 0 28px;
+    position: absolute;
+    font-size: 12px;
+    color: gray;
+}
+
+.register_usernameTips {
+    top: 143px;
+}
+
+.register_emailTips {
+    top: 208px;
+}
+
+.register_passwordTips {
+    top: 275px;
 }
 
 .register_title {
@@ -29,8 +50,8 @@
 .register_personMessage_email {
     display: block;
     width: 400px;
-    height: 30px;
-    margin: 20px auto;
+    height: 50px;
+    margin: 15px auto;
     outline: 0px;
     border-style: none;
     border-bottom: 1px solid gray;
@@ -42,8 +63,8 @@
 .register_personMessage_password1 {
     display: block;
     width: 400px;
-    height: 30px;
-    margin: 20px auto;
+    height: 50px;
+    margin: 15px auto;
     outline: 0px;
     border-style: none;
     border-bottom: 1px solid gray;
@@ -79,7 +100,7 @@
 
 .register_returnLogin {
     position: inherit;
-    bottom: 10px;
+    bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
