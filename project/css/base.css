@@ -3,16 +3,30 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+ul {
+    position: absolute;
+    left: 15%;
+    display: inline-block;
+    width: 450px;
+}
+
 ul li {
     list-style: none;
     font-family: "Microsoft YaHei", 微软雅黑;
     font-size: 16px;
     font-weight: bold;
+    display: inline-block;
 }
 
 a {
     display: inline-block;
-    margin-top: 10px;
     text-decoration: none;
     color: rgba(0, 0, 0, .7);
 }

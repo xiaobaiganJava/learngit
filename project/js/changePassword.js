@@ -35,10 +35,10 @@ changePassword_returnLogin1.onclick = function() {
 }
 
 //修改密码的tab栏
-for (var i = 0; i < list.length; i++) {
+for (let i = 0; i < list.length; i++) {
     list[i].setAttribute('index1', i);
     list[i].onclick = function() {
-        for (var i = 0; i < list.length; i++) {
+        for (let i = 0; i < list.length; i++) {
             list[i].className = '';
         }
         this.className = 'changecurrent';
@@ -56,22 +56,22 @@ for (var i = 0; i < list.length; i++) {
 
 //用旧密码修改密码
 changePassword_button.onclick = function() {
-        var changePasswordUsername = changePassword_username.value;
-        var changePasswordOldPassword = changePassword_oldPassword.value;
-        var changePasswordNewPassword = changePassword_newPassword.value;
-        var changePasswordJSON = {
+        let changePasswordUsername = changePassword_username.value;
+        let changePasswordOldPassword = changePassword_oldPassword.value;
+        let changePasswordNewPassword = changePassword_newPassword.value;
+        let changePasswordJSON = {
             "oldPassword": changePasswordOldPassword,
             "username": changePasswordUsername,
             "newPassword": changePasswordNewPassword
         };
-        var changePasswordJSONString = JSON.stringify(changePasswordJSON);
-        var changePasswordData = getJSON('POST', 'http://175.178.51.126:8091/smallA/updatePwd', changePasswordJSONString).then(res => {
-            var tips = JSON.parse(res)
+        let changePasswordJSONString = JSON.stringify(changePasswordJSON);
+        let changePasswordData = getJSON('POST', 'http://175.178.51.126:8091/smallA/updatePwd', changePasswordJSONString).then(res => {
+            let tips = JSON.parse(res)
             console.log(res);
-            if (tips.code > 400) {
-                alert(tips.msg);
-            } else {
+            if (tips.code == 200) {
                 alert('修改成功');
+            } else {
+                alert('修改失败');
                 console.log(tips.msg);
             }
         });
@@ -79,9 +79,9 @@ changePassword_button.onclick = function() {
     //获取邮箱验证码 邮箱获取间隔 (60s)
 
 changePassword_getCode.onclick = function() {
-    var time = 60;
+    let time = 60;
     this.disabled = true;
-    var timer = setInterval(function() {
+    let timer = setInterval(function() {
         if (time == 0) {
             // 清除定时器和复原按钮
             clearInterval(timer);
@@ -93,16 +93,16 @@ changePassword_getCode.onclick = function() {
         }
     }, 1000);
     //获取邮箱验证码
-    var changePasswordEmail = changePassword_email.value;
-    var change_Password_JSON = {
+    let changePasswordEmail = changePassword_email.value;
+    let change_Password_JSON = {
         "email": changePasswordEmail,
     };
-    var change_Password_JSONString = JSON.stringify(change_Password_JSON);
-    var change_Password_Data = getJSON('POST', 'http://175.178.51.126:8091/smallA/getCode', change_Password_JSONString).then(res => {
-        var tips = JSON.parse(res)
+    let change_Password_JSONString = JSON.stringify(change_Password_JSON);
+    let change_Password_Data = getJSON('POST', 'http://175.178.51.126:8091/smallA/getCode', change_Password_JSONString).then(res => {
+        let tips = JSON.parse(res)
         console.log(res); //获取响应报文
-        if (tips.code > 400) {
-            alert(tips.msg);
+        if (tips.code == 200) {
+            alert('获取失败');
         } else {
             alert('获取成功');
             console.log(tips.msg);
@@ -112,22 +112,22 @@ changePassword_getCode.onclick = function() {
 
 //用邮箱验证码修改密码
 changePassword_button1.onclick = function() {
-    var changePasswordEmail = changePassword_email.value;
-    var changePasswordCode = changePassword_code.value;
-    var changePasswordNewPassword1 = changePassword_newPassword1.value;
-    var changePassword_JSON = {
+    let changePasswordEmail = changePassword_email.value;
+    let changePasswordCode = changePassword_code.value;
+    let changePasswordNewPassword1 = changePassword_newPassword1.value;
+    let changePassword_JSON = {
         "email": changePasswordEmail,
         "newPassword": changePasswordNewPassword1,
         "code": changePasswordCode
     };
-    var changePassword_JSONString = JSON.stringify(changePassword_JSON);
-    var changePassword_Data = getJSON('POST', 'http://175.178.51.126:8091/smallA/rememberPwd', changePassword_JSONString).then(res => {
-        var tips = JSON.parse(res)
+    let changePassword_JSONString = JSON.stringify(changePassword_JSON);
+    let changePassword_Data = getJSON('POST', 'http://175.178.51.126:8091/smallA/rememberPwd', changePassword_JSONString).then(res => {
+        let tips = JSON.parse(res)
         console.log(res);
-        if (tips.code > 400) {
-            alert(tips.msg);
-        } else {
+        if (tips.code == 200) {
             alert('修改成功');
+        } else {
+            alert('修改失败');
             console.log(tips.msg);
         }
     });

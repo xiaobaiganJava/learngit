@@ -1,25 +1,54 @@
+/* 登录页面整体样式 */
+
+
+/* 登录背景 */
+
 .login_background {
     position: absolute;
     top: 0px;
     width: 100%;
-    /* height: 730px; */
     height: calc(100vh);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: azure;
+}
+
+
+/* 小Alogo */
+
+.Login_backImg {
+    position: absolute;
+    top: 22%;
+    left: 26%;
+}
+
+.welcome {
+    color: slateblue;
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    left: 18%;
+    top: 50%;
 }
 
 .login {
     position: absolute;
     top: 45%;
-    right: 50%;
+    right: 30%;
     width: 550px;
-    height: 350px;
+    height: 370px;
     transform: translate(50%, -50%);
     background-color: white;
+    border-radius: 10px;
 }
+
+
+/* 登录tab栏 */
 
 .login .current {
     color: green;
 }
+
+
+/* 关闭登录栏 */
 
 .login_close {
     position: inherit;
@@ -35,6 +64,9 @@
     transition: 1.5s;
 }
 
+
+/* 登录tab栏标题 */
+
 .login_title {
     margin: auto auto;
     width: 400px;
@@ -49,11 +81,14 @@
     cursor: pointer;
 }
 
+
+/* 登录输入内容栏 */
+
 .login_personMessage_username {
     display: block;
     width: 400px;
     height: 30px;
-    margin: 20px auto;
+    margin: 25px auto;
     outline: 0px;
     border-style: none;
     border-bottom: 1px solid gray;
@@ -65,7 +100,7 @@
     display: block;
     width: 400px;
     height: 30px;
-    margin: 20px auto;
+    margin: 25px auto;
     outline: 0px;
     border-style: none;
     border-bottom: 1px solid gray;
@@ -86,6 +121,22 @@
     font-size: 15px;
 }
 
+
+/* 七天免登陆 */
+
+.freeLogin {
+    position: absolute;
+    right: 10%;
+    top: 215px;
+}
+
+.freeLogin_Button {
+    position: absolute;
+}
+
+
+/* 隐藏密码 */
+
 .login_personMessage_password_close,
 .login_personMessage_password_close1 {
     width: 30px;
@@ -97,13 +148,30 @@
     background: url(../image/closeeye.png);
 }
 
+
+/* 登录提示 */
+
+.login_passwordTips,
+.login_passwordTips1 {
+    bottom: 155px;
+    left: 75px;
+    font-size: 12px;
+    position: absolute;
+}
+
+
+/* 忘记密码 */
+
 .login_personMessage_password_forget,
 .login_personMessage_password_forget1 {
     display: block;
     position: absolute;
     left: 80px;
-    margin-top: 15px;
+    top: 215px;
 }
+
+
+/* 登录按钮 */
 
 .login_personMessageButton,
 .login_personMessageButton1 {
@@ -119,6 +187,9 @@
     transform: translate(-50%, 0);
     cursor: pointer;
 }
+
+
+/* 注册账号 */
 
 .login_returnRegister {
     position: inherit;
