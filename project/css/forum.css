@@ -1,6 +1,6 @@
 .forum {
     max-width: 1519px;
-    min-width: 1000px;
+    background-color: skyblue;
 }
 
 
@@ -13,6 +13,7 @@
     left: 0;
     top: 0;
     background-color: white;
+    flex-shrink: 0;
 }
 
 .topBar_logoImg {
@@ -35,7 +36,6 @@
     position: absolute;
     width: 100%;
     height: 70px;
-    margin: auto auto;
 }
 
 .topBar .topBar_allTalking,
@@ -92,12 +92,14 @@
     top: 70px;
     left: 0%;
     text-align: center;
-    background-color: white;
+    background-color: seashell;
     display: none;
+    z-index: 10;
 }
 
 .topBar_submenu .submenu_username,
-.topBar_submenu .submenu_logOut {
+.topBar_submenu .submenu_logOut,
+.topBar_submenu .submenu_photoAlbum {
     margin: 0;
     display: block;
     height: 60px;
@@ -136,7 +138,7 @@
 
 /* 动态部分 */
 
-.forum {
+.forum_root {
     height: 2000px;
     width: 1519px;
     background-color: skyblue;
@@ -151,10 +153,11 @@
 .forum_content {
     position: relative;
     margin: 50px auto;
-    width: 800px;
-    height: 500px;
+    width: 900px;
+    height: 600px;
     background-color: white;
     border-radius: 20px;
+    z-index: 1;
 }
 
 .forum_usernameAndHeadImg {
@@ -180,7 +183,7 @@
 
 .forum_title {
     position: absolute;
-    top: 22%;
+    top: 15%;
     left: 10%;
     width: 600px;
     height: 50px;
@@ -193,29 +196,108 @@
 
 .forum_text {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 10%;
-    width: 600px;
-    height: 150px;
+    width: 700px;
+    height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
+}
+
+#text {
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+}
+
+.forum_Img {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    width: 600px;
+    height: 200px;
+}
+
+#forum_talkingImg {
+    width: 200px;
+    height: 200px;
 }
 
 .forum_timeAndLikeNum {
     position: absolute;
     bottom: 5%;
     left: 10%;
-    width: 600px;
+    width: 700px;
     height: 25px;
 }
 
 #time,
-#likeNum {
+#likeNum,
+#likeImg {
     position: absolute;
     display: inline-block;
 }
 
 #likeNum {
     right: 5%;
+}
+
+#likeImg {
+    bottom: 3px;
+    right: 8%;
+    cursor: pointer;
+}
+
+.personalHomePage {
+    height: 600px;
+    width: 800px;
+    margin: 25px auto;
+}
+
+.headImg_box {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.headImg {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 150px;
+    width: 150px;
+}
+
+.headImg_button {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    color: transparent;
+}
+
+.userPersonalMessage_box {
+    position: absolute;
+    display: inline-block;
+    width: 550px;
+    height: 600px;
+    background-color: wheat;
+}
+
+.userPersonalMessage_box div {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.changePeasonalMessage {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid olive;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    cursor: pointer;
 }

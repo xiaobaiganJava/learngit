@@ -5,17 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
     <title>登录页面</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="../css/changePassword.css">
-    <link rel="stylesheet" href="../css/forum.css">
 </head>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/register.css">
+<link rel="stylesheet" href="../css/changePassword.css">
 
 <body>
-    <!-- html部分 -->
     <div class="login_background">
         <img src="../image/Alogo.png" alt="" class="Login_backImg">
         <div class="welcome">
@@ -103,63 +100,11 @@
             </div>
         </div>
     </div>
-    <div class="forum" style="display: none;">
-        <div class="topBar">
-            <div class="topBar_container">
-                <img src="../image/Alogo-head.png" title="欢迎来到小A创客论坛" class="topBar_logoImg">
-                <img src="../image/Alogo-font.png" title="欢迎来到小A创客论坛" class="topBar_logoFont">
-                <ul>
-                    <li><a href="#" class="topBar_allTalking">所有动态</a></li>
-                    <li><a href="#" class="topBar_hotTalking">热门动态</a></li>
-                    <li><a href="#" class="topBar_createTalking">新建动态</a></li>
-                    <li><a href="#" class="topBar_deleteTalking">删除动态</a></li>
-                </ul>
-                <div class="topBar_searchBox">
-                    <input type="text" placeholder="搜索动态" class="topBar_search">
-                    <img src="../image/search.png" alt="" class="topBar_searchImg">
-                </div>
-                <div class="topBar_userInfo">
-                    <img src="../image/Alogo.png" alt="" class="topBar_userHeadImg">
-                    <span class="topBar_username">admin</span>
-                    <ul class="topBar_submenu">
-                        <li class="submenu_username"><a href="#">个人信息</a></li>
-                        <li class="submenu_logOut"><a href="#">退出登录</a></li>
-                    </ul>
-                </div>
-                <div class="changeTheme">
-                    <span class="changeTheme_text">切换黑夜模式</span>
-                    <img src="../image/Alogo-font.png" alt="" class="changeTheme_img">
-                </div>
-            </div>
-        </div>
-        <div class="forum">
-            <div class="forum_container">
-                <div class="forum_content">
-                    <div class="forum_usernameAndHeadImg">
-                        <img src="" alt="" id="userHeadImg">
-                        <span id="Username"></span>
-                    </div>
-                    <div class="forum_title">
-                        <span id="title"></span>
-                    </div>
-                    <div class="forum_text">
-                        <div id="text"></div>
-                    </div>
-                    <div class="forum_timeAndLikeNum">
-                        <div id="time"></div>
-                        <div id="likeNum"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <script src="../js/homepage.js"></script> -->
-
-    <script src="../js/cookieFunction.js"></script>
-    <script src="../js/changePassword.js"></script>
-    <script src="../js/logAndReg.js"></script>
+    <script src="../js/allElements.js"></script>
     <script src="../js/ajaxFunction.js"></script>
-    <script src="../js/forum.js"></script>
+    <script src="../js/cookieFunction.js"></script>
+    <script src="../js/logAndReg.js"></script>
+    <script src="../js/changePassword.js"></script>
 </body>
 
 </html>

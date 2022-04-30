@@ -1,9 +1,8 @@
-//点击切换 tab栏
+// 登录界面点击切换 tab栏
 var login = document.querySelector('.login');
 var lis = login.querySelectorAll('li');
-var usernameLogin = document.querySelector('.login_personMessage');
-var emailLogin = document.querySelector('.login_personMessageEmail');
-
+// 登录后显示用户名
+var topBar_username = document.querySelector(".topBar_username");
 // title tab切换
 for (let i = 0; i < lis.length; i++) {
     // 给li设置索引号，方便与内容相匹配
@@ -28,42 +27,6 @@ for (let i = 0; i < lis.length; i++) {
 
 /*  异步概念   */
 // 登录与注册
-// 登录
-var login_background = document.querySelector('.login_background');
-var login_close = document.querySelectorAll('.login_close');
-var login_returnRegister = document.querySelector('.login_returnRegister_a');
-var login_personMessage_password_close = document.querySelector('.login_personMessage_password_close');
-var login_personMessage_password_close1 = document.querySelector('.login_personMessage_password_close1');
-var login_personMessage_password = document.querySelector('.login_personMessage_password');
-var login_personMessage_password1 = document.querySelector('.login_personMessage_password1');
-var login_personMessage_username = document.querySelector('.login_personMessage_username');
-var login_personMessage_email = document.querySelector('.login_personMessage_email');
-var login_personMessageButton = document.querySelector('.login_personMessageButton');
-var login_personMessageButton1 = document.querySelector('.login_personMessageButton1');
-var topBar_username = document.querySelector(".topBar_username");
-// 注册
-var register = document.querySelector('.register');
-var register_background = document.querySelector('.register_background');
-var register_returnLogin = document.querySelector('.register_returnLogin_a');
-var register_personMessage_password_close = document.querySelector('.register_personMessage_password_close');
-var register_personMessage_password_close1 = document.querySelector('.register_personMessage_password_close1');
-var register_personMessage_password = document.querySelector('.register_personMessage_password');
-var register_personMessage_password1 = document.querySelector('.register_personMessage_password1');
-var register_personMessage_username = document.querySelector('.register_personMessage_username');
-var register_personMessage_email = document.querySelector('.register_personMessage_email');
-var register_personMessageButton = document.querySelector('.register_personMessageButton');
-// 正则提示
-var registerPasswordTips = document.querySelector('.register_passwordTips');
-var registerUsernameTips = document.querySelector('.register_usernameTips');
-var registerEmailTips = document.querySelector('.register_emailTips');
-var registerPasswordTips1 = document.querySelector('.register_passwordTips1');
-var loginPasswordTips = document.querySelector('.login_passwordTips');
-var loginPasswordTips1 = document.querySelector('.login_passwordTips1');
-// 论坛首页
-var forum = document.querySelector('.forum');
-// 七天免登陆
-var freeLogin_button = document.querySelector('.freeLogin_button');
-
 // 关闭登录注册页面
 login_close[0].onclick = function() {
     login_background.style.display = 'none';
@@ -194,6 +157,12 @@ register_personMessageButton.onclick = function() {
             alert(tips.msg);
         } else {
             alert('注册成功');
+            login.style.display = 'block';
+            register.style.display = 'none';
+            // register_personMessage_username.value = '';
+            // register_personMessage_password1.value = '';
+            // register_personMessage_email.value = '';
+            // register_personMessage_password1.value = '';
             console.log(tips.msg);
         }
     });
@@ -215,14 +184,18 @@ login_personMessageButton.onclick = function() {
         console.log(res);
         if (tips.code === 200) {
             alert('登录成功');
-            login_background.style.display = 'none';
-            forum.style.display = 'block';
-            // 你在登录成功这里面加入cookie  你的一些登录操作必须要等服务器那边给你回应才能实现  而不是随随便便就存上去的  
-            // setCookie函数你第一个参数是key，你自己设定的 是字符串 要加双引号
+            // 登录成功这里面加入cookie  登录操作必须在等服务器那边给你回应才能实现  而不是随随便便就存上去的  
+            // setCookie函数第一个参数是key，自己设定的 是字符串 要加双引号
+            setCookie("id", tips.data.id);
             setCookie("username", login_personMessage_username.value);
             setCookie("password", login_personMessage_password.value);
-            topBar_username.innerHTML = getCookie("username");
+            setCookie("headImg", tips.data.headImg);
+            // 主页导航栏的头像和用户名显示
 
+            // 去往主页
+            window.location = "homepage.html";
+            topBar_username.innerHTML = getCookie(username);
+            // topBar_userHeadImg.src = "http://" + getCookie(headImg);
         } else {
             alert('用户名或密码错误');
         }
@@ -233,7 +206,7 @@ login_personMessageButton.onclick = function() {
 login_personMessageButton1.onclick = function() {
     let loginEmail = login_personMessage_email.value;
     let loginEmailPassword = login_personMessage_password1.value;
-    // 将拿到的数据封装成json数组，
+    // 将拿到的数据封装成json数据，
     let loginUserJSON = {
         "email": loginEmail,
         "password": loginEmailPassword
@@ -244,22 +217,23 @@ login_personMessageButton1.onclick = function() {
         let tips = JSON.parse(res)
         console.log(res);
         if (tips.code === 200) {
-            login_background.style.display = 'none';
-            forum.style.display = 'block';
+            alert('登陆成功');
+            console.log(tips.data.id);
+            setCookie("id", tips.data.id);
             setCookie("mailname", login_personMessage_email.value);
             setCookie("password", login_personMessage_password1.value);
+            setCookie("headImg", tips.data.headImg);
+            window.location = "homepage.html";
             topBar_username.innerHTML = getCookie("mailname");
+
         } else {
             alert('邮箱或密码错误');
         }
     });
 }
 
-// 七天免登陆  除了可以直接跳过登录  你还可以设置你的用户名为你的账号  如果你有单独的名字而不是账号  到时候再跟你说  
-// 不是没七天登录  而是你第一次登录进去这部分代码没用的  你是登录进去才有cookie  你这都没办法触发1
+// 七天免登陆 
 // 这样判断不行  你那勾当你刷新页面他自动变为false的  应该把你的勾也存到cookie  或者加个js的tag值来判断是不是打过勾
 if (getCookie("password") != "") {
-    topBar_username.innerHTML = getCookie("username");
-    login_background.style.display = 'none';
-    forum.style.display = 'block';
+    window.location = "homepage.html";
 }

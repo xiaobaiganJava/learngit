@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #content {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .img {
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入关键字" id="search">
+            <ul class="list-group" id="list-box">
+                <li class="list-group-item">提示文字显示的地方</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var searchInp = document.getElementById('search');
+        var listBox = document.getElementById('list-box');
+        var timer = null;
+        // 当用户在文本框中输入的时候触发
+        searchInp.oninput = function() {
+            var key = this.value;
+            timer = setTimeout(function() {
+                // 向服务器发出
+            })
+        }
+    </script>
+    <!-- <img src="${tips.data[i].images}" alt="" id="forum_talkingImg"> -->
+    <!-- <input type="text" name="" id="" onchange="onchange()">
+    <script>
+        function inputChange(e) {
+            var queryList = this.props.course.queryList;
+            var list = [];
+            var val = e.target.value;
+            if (queryList != undefined && queryList != null && queryList.length != 0) {
+                for (var i = 0; i < queryList.length; i++) {
+                    var num = queryList[i].menuFullName.indexOf(val);
+                    if (num != -1) {
+                        list.push(queryList[i]);
+                    }
+                }
+            }
+        };
+    </script> -->
+</body>
+
+</html>

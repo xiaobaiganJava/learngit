@@ -1,21 +1,5 @@
 var changePassword = document.querySelector('.changePassword');
 var list = changePassword.querySelectorAll('li');
-var changePassword_oldPasswordBox = document.querySelector('.changePassword_oldPasswordBox');
-var changePassword_emailCode = document.querySelector('.changePassword_emailCode');
-var changePassword_returnLogin = document.querySelector('.changePassword_returnLogin');
-var changePassword_returnLogin1 = document.querySelector('.changePassword_returnLogin1');
-var login_personMessage_password_forget = document.querySelector('.login_personMessage_password_forget');
-var login_personMessage_password_forget1 = document.querySelector('.login_personMessage_password_forget1');
-var changePassword_button = document.querySelector('.changePassword_button');
-var changePassword_button1 = document.querySelector('.changePassword_button1');
-var changePassword_oldPassword = document.querySelector('.changePassword_oldPassword');
-var changePassword_username = document.querySelector('.changePassword_username');
-var changePassword_newPassword = document.querySelector('.changePassword_newPassword');
-var changePassword_email = document.querySelector('.changePassword_email');
-var changePassword_code = document.querySelector('.changePassword_code');
-var changePassword_getCode = document.querySelector('.changePassword_getCode');
-var changePassword_newPassword1 = document.querySelector('.changePassword_newPassword1');
-
 //切换登录与修改密码
 login_personMessage_password_forget.onclick = function() {
     login.style.display = 'none';
@@ -56,28 +40,30 @@ for (let i = 0; i < list.length; i++) {
 
 //用旧密码修改密码
 changePassword_button.onclick = function() {
-        let changePasswordUsername = changePassword_username.value;
-        let changePasswordOldPassword = changePassword_oldPassword.value;
-        let changePasswordNewPassword = changePassword_newPassword.value;
-        let changePasswordJSON = {
-            "oldPassword": changePasswordOldPassword,
-            "username": changePasswordUsername,
-            "newPassword": changePasswordNewPassword
-        };
-        let changePasswordJSONString = JSON.stringify(changePasswordJSON);
-        let changePasswordData = getJSON('POST', 'http://175.178.51.126:8091/smallA/updatePwd', changePasswordJSONString).then(res => {
-            let tips = JSON.parse(res)
-            console.log(res);
-            if (tips.code == 200) {
-                alert('修改成功');
-            } else {
-                alert('修改失败');
-                console.log(tips.msg);
-            }
-        });
-    }
-    //获取邮箱验证码 邮箱获取间隔 (60s)
+    let changePasswordUsername = changePassword_username.value;
+    let changePasswordOldPassword = changePassword_oldPassword.value;
+    let changePasswordNewPassword = changePassword_newPassword.value;
+    let changePasswordJSON = {
+        "oldPassword": changePasswordOldPassword,
+        "username": changePasswordUsername,
+        "newPassword": changePasswordNewPassword
+    };
+    let changePasswordJSONString = JSON.stringify(changePasswordJSON);
+    let changePasswordData = getJSON('POST', 'http://175.178.51.126:8091/smallA/updatePwd', changePasswordJSONString).then(res => {
+        let tips = JSON.parse(res)
+        console.log(res);
+        if (tips.code == 200) {
+            alert('修改成功');
+            login.style.display = 'block';
+            changePassword.style.display = 'none';
+        } else {
+            alert('修改失败');
+            console.log(tips.msg);
+        }
+    });
+}
 
+//获取邮箱验证码 邮箱获取间隔 (60s)
 changePassword_getCode.onclick = function() {
     let time = 60;
     this.disabled = true;
@@ -126,6 +112,8 @@ changePassword_button1.onclick = function() {
         console.log(res);
         if (tips.code == 200) {
             alert('修改成功');
+            login.style.display = 'block';
+            changePassword.style.display = 'none';
         } else {
             alert('修改失败');
             console.log(tips.msg);
