@@ -4,7 +4,7 @@
         "uid": 32,
     };
     let forumUserJSONString = JSON.stringify(forumUserJSON);
-    let forumData = getJSON('POST', 'http://175.178.51.126:8091/smallA/selectAllDiary', forumUserJSONString).then(res => {
+    let forumData = getJSON('POST', 'http://175.178.51.126:8091/smallA/selectHotDiary', forumUserJSONString).then(res => {
         let tips = JSON.parse(res);
         console.log(tips);
         // 因为可能会遇到需要刷新的  每次都得保证里面先是空的然后一个一个加进去
@@ -26,7 +26,7 @@
             <p id="text">${tips.data[i].content}</p>
         </div>
         <div class="forum_Img">
-        <img src="${"http://"+tips.data[7].images[0].img}" alt="" id="forum_talkingImg">
+        <img src="${"http://"+tips.data[2].images[0].img}" alt="" id="forum_talkingImg">
         </div>
         <div class="forum_timeAndLikeNum">
             <div id="time">${tips.data[i].createTime}</div>

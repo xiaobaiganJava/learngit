@@ -16,6 +16,15 @@
     flex-shrink: 0;
 }
 
+.topBar_container {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+}
+
+
+/* logo部分 */
+
 .topBar_logoImg {
     width: 50px;
     height: 40px;
@@ -32,11 +41,8 @@
     left: 65px;
 }
 
-.topBar_container {
-    position: absolute;
-    width: 100%;
-    height: 70px;
-}
+
+/* 跳转页面 */
 
 .topBar .topBar_allTalking,
 .topBar .topBar_hotTalking,
@@ -51,6 +57,9 @@
     text-align: center;
 }
 
+
+/* 搜索栏 */
+
 .topBar_searchBox {
     position: relative;
     top: 15px;
@@ -63,6 +72,7 @@
     width: 350px;
     height: 40px;
     border-radius: 5px;
+    outline: none;
 }
 
 .topBar_searchImg {
@@ -71,6 +81,9 @@
     right: 4%;
     cursor: pointer;
 }
+
+
+/* 用户栏 */
 
 .topBar_userHeadImg {
     height: 20px;
@@ -114,6 +127,9 @@
     top: 0px;
     right: 200px;
 }
+
+
+/* 改变主题 */
 
 .changeTheme {
     height: 100%;
@@ -249,8 +265,12 @@
     cursor: pointer;
 }
 
-.personalHomePage {
-    height: 600px;
+
+/* 个人主页部分 */
+
+.personalMessage {
+    position: relative;
+    height: 650px;
     width: 800px;
     margin: 25px auto;
 }
@@ -259,7 +279,7 @@
     position: relative;
     display: inline-block;
     width: 250px;
-    height: 100%;
+    height: 600px;
     background-color: #fff;
 }
 
@@ -291,13 +311,180 @@
     margin-left: 50px;
 }
 
-.changePeasonalMessage {
+.changePeasonalMessage_button {
+    background-color: orange;
+    color: #fff;
     width: 200px;
     height: 50px;
-    border-radius: 10px;
-    border: 1px solid olive;
+    border-radius: 20px;
+    border: 0;
     position: absolute;
     bottom: 20%;
-    left: 30%;
+    left: 50%;
     cursor: pointer;
+}
+
+
+/* 修改个人信息 */
+
+.changeMessage_background {
+    position: relative;
+    height: 660px;
+    width: 100%;
+    background-color: skyblue;
+    display: none;
+}
+
+.changeuserPersonalMessage_box {
+    background-color: white;
+    width: 550px;
+    height: 500px;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+
+/* 修改信息内容框 */
+
+.changeUserContent {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 修改信息输入框 */
+
+.changeUser_id,
+.changeUser_username,
+.changeUser_email,
+.changeUser_phone,
+.changeUser_sex,
+.changeUser_age {
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin: 20px auto;
+    outline: 0px;
+    border-style: none;
+    border-bottom: 1px solid gray;
+    text-indent: 5px;
+    font-size: 15px;
+}
+
+
+/* 确认修改按钮 */
+
+.changeUserButton {
+    width: 400px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 50px;
+    border: 0;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+
+
+/* 返回主页按钮 */
+
+.changeuser_returnHomepage {
+    position: inherit;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+/* 删除账号 */
+
+.deleteBox_background {
+    position: relative;
+    width: 100%;
+    height: 660px;
+    background-color: skyblue;
+    display: none;
+}
+
+.delete_userButton {
+    background-color: orange;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    cursor: pointer;
+}
+
+.deleteBox {
+    background-color: #fff;
+    width: 550px;
+    height: 300px;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+
+/* 删除信息输入框 */
+
+.delete_username,
+.delete_email,
+.delete_password {
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin: 20px auto;
+    outline: 0px;
+    border-style: none;
+    border-bottom: 1px solid gray;
+    text-indent: 5px;
+    font-size: 15px;
+}
+
+
+/* 确认删除按钮 */
+
+.delete_button {
+    width: 400px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    border-radius: 50px;
+    border: 0;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+
+.delete_returnHomepage {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 10px;
+    height: 50px;
+    line-height: 50px;
 }

@@ -40,30 +40,47 @@
                 </div>
             </div>
         </div>
+        <!-- 个人信息 -->
         <div class="personalHomePage">
-            <div class="headImg_box">
-                <input type="file" class="headImg_button">
-            </div>
-            <div class="userPersonalMessage_box">
-                <div class="PersonalMessage_Id">ID:</div>
-                <div class="PersonalMessage_username">用户名:</div>
-                <div class="PersonalMessage_sex">性别:</div>
-                <div class="PersonalMessage_age">年龄:</div>
-                <div class="PersonalMessage_phone">手机:</div>
-                <div class="PersonalMessage_email">邮箱:</div>
-                <button class="changePeasonalMessage">修改个人信息</button>
-            </div>
-            <div class="changeuserPersonalMessage_box" style="display: none;">
-                <div class="changeUserContent">
-                    <input type="text" class="changeUser_id" placeholder="请输入ID">
-                    <input type="text" class="changeUser_username" placeholder="请输入用户名">
-                    <input type="text" class="changeUser_email" placeholder="请输入邮箱">
-                    <input type="text" class="changeUser_phone" placeholder="请输入手机号">
-                    <input type="text" class="changeUser_sex" placeholder="请输入性别">
-                    <input type="text" class="changeUser_age" placeholder="请输入年龄">
+            <div class="personalMessage">
+                <div class="headImg_box">
+                    <input type="file" class="headImg_button">
                 </div>
-                <button class="changeUserButton">确认修改</button>
-                <a href="#" class="changeuser_returnHomepage">返回主页</a>
+                <div class="userPersonalMessage_box">
+                    <div class="PersonalMessage_Id">ID:</div>
+                    <div class="PersonalMessage_username">用户名:</div>
+                    <div class="PersonalMessage_sex">性别:</div>
+                    <div class="PersonalMessage_age">年龄:</div>
+                    <div class="PersonalMessage_phone">手机:</div>
+                    <div class="PersonalMessage_email">邮箱:</div>
+                    <button class="delete_userButton">删除账号</button>
+                    <button class="changePeasonalMessage_button">修改个人信息</button>
+                </div>
+            </div>
+            <!-- 修改个人信息 -->
+            <div class="changeMessage_background">
+                <div class="changeuserPersonalMessage_box">
+                    <div class="changeUserContent">
+                        <input type="text" class="changeUser_id" placeholder="请输入ID">
+                        <input type="text" class="changeUser_username" placeholder="请输入用户名">
+                        <input type="text" class="changeUser_email" placeholder="请输入邮箱">
+                        <input type="text" class="changeUser_phone" placeholder="请输入手机号">
+                        <input type="text" class="changeUser_sex" placeholder="请输入性别">
+                        <input type="text" class="changeUser_age" placeholder="请输入年龄">
+                    </div>
+                    <button class="changeUserButton">确认修改</button>
+                    <a href="#" class="changeuser_returnHomepage">返回个人信息</a>
+                </div>
+            </div>
+            <!-- 删除账号 -->
+            <div class="deleteBox_background">
+                <div class="deleteBox">
+                    <input type="text" class="delete_username" placeholder="请输入用户名">
+                    <input type="text" class="delete_email" placeholder="请输入邮箱">
+                    <input type="text" class="delete_password" placeholder="请输入密码">
+                    <button class="delete_button">确定删除</button>
+                    <a href="#" class="delete_returnHomepage">返回主页</a>
+                </div>
             </div>
         </div>
     </div>

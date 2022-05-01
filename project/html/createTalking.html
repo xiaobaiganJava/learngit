@@ -8,38 +8,53 @@
     <title>发布动态</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="../css/createTalking.css">
 </head>
 
 <body>
-    <div class="topBar">
-        <div class="topBar_container">
-            <img src="../image/Alogo-head.png" title="欢迎来到小A创客论坛" class="topBar_logoImg">
-            <img src="../image/Alogo-font.png" title="欢迎来到小A创客论坛" class="topBar_logoFont">
-            <ul>
-                <li><a href="#" class="topBar_allTalking">所有动态</a></li>
-                <li><a href="#" class="topBar_hotTalking">热门动态</a></li>
-                <li><a href="#" class="topBar_createTalking">新建动态</a></li>
-                <li><a href="#" class="topBar_deleteTalking">删除动态</a></li>
-            </ul>
-            <div class="topBar_searchBox">
-                <input type="text" placeholder="搜索动态" class="topBar_search">
-                <img src="../image/search.png" alt="" class="topBar_searchImg">
-            </div>
-            <div class="topBar_userInfo">
-                <img src="" alt="" class="topBar_userHeadImg">
-                <span class="topBar_username"></span>
-                <ul class="topBar_submenu">
-                    <li class="submenu_username"><a href="#">个人信息</a></li>
-                    <li class="submenu_photoAlbum"><a href="#">个人相册</a></li>
-                    <li class="submenu_logOut"><a href="#">退出登录</a></li>
+    <div class="forum">
+        <div class="topBar">
+            <div class="topBar_container">
+                <img src="../image/Alogo-head.png" title="欢迎来到小A创客论坛" class="topBar_logoImg">
+                <img src="../image/Alogo-font.png" title="欢迎来到小A创客论坛" class="topBar_logoFont">
+                <ul>
+                    <li><a href="#" class="topBar_allTalking">所有动态</a></li>
+                    <li><a href="#" class="topBar_hotTalking">热门动态</a></li>
+                    <li><a href="#" class="topBar_createTalking">新建动态</a></li>
+                    <li><a href="#" class="topBar_deleteTalking">删除动态</a></li>
                 </ul>
+                <div class="topBar_searchBox">
+                    <input type="text" placeholder="搜索动态" class="topBar_search">
+                    <img src="../image/search.png" alt="" class="topBar_searchImg">
+                </div>
+                <div class="topBar_userInfo">
+                    <img src="" alt="" class="topBar_userHeadImg">
+                    <span class="topBar_username"></span>
+                    <ul class="topBar_submenu">
+                        <li class="submenu_username"><a href="#">个人信息</a></li>
+                        <li class="submenu_photoAlbum"><a href="#">个人相册</a></li>
+                        <li class="submenu_logOut"><a href="#">退出登录</a></li>
+                    </ul>
+                </div>
+                <div class="changeTheme">
+                    <span class="changeTheme_text">切换黑夜模式</span>
+                    <img src="../image/Alogo-font.png" alt="" class="changeTheme_img">
+                </div>
             </div>
-            <div class="changeTheme">
-                <span class="changeTheme_text">切换黑夜模式</span>
-                <img src="../image/Alogo-font.png" alt="" class="changeTheme_img">
+        </div>
+        <div class="createTalkingBox_background">
+            <div class="createTalking_box">
+                <input type="text" class="createTalking_title" placeholder="请输入你的动态标题">
+                <input type="text" class="createTalking_content" placeholder="在此处输入内容">
+                <input type="file" class="createTalking_img">
+                <button class="createTalking_button">确认发布</button>
             </div>
         </div>
     </div>
+    <script src="../js/allElements.js"></script>
+    <script src="../js/ajaxFunction.js"></script>
+    <script src="../js/cookieFunction.js"></script>
+    <script src="../js/forum.js"></script>
 </body>
 
 </html>

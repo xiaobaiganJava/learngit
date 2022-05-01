@@ -1,0 +1,43 @@
+.createTalkingBox_background {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background-color: skyblue;
+}
+
+.createTalking_box {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 600px;
+    width: 800px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.createTalking_title,
+.createTalking_content,
+.createTalking_img {
+    display: block;
+}
+
+.createTalking_title {
+    margin-top: 50px;
+    margin-left: 75px;
+    border: 0;
+    border-bottom: 2px solid gainsboro;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+}
+
+.createTalking_content {
+    margin-top: 50px;
+    margin-left: 75px;
+    border: 1px solid gainsboro;
+    width: 600px;
+    height: 200px;
+    vertical-align: top;
+    outline: none;
+}
