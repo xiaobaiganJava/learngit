@@ -1,5 +1,6 @@
 .forum {
-    max-width: 1519px;
+    max-width: 1600px;
+    min-width: 1000px;
     background-color: skyblue;
 }
 
@@ -185,14 +186,15 @@
     line-height: 70px;
 }
 
-#userHeadImg {
+.userHeadImg {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     vertical-align: middle;
+    cursor: pointer;
 }
 
-#Username {
+.Username {
     position: absolute;
     left: 60px;
 }
@@ -206,7 +208,7 @@
     line-height: 50px;
 }
 
-#title {
+.title {
     font-size: 20px;
 }
 
@@ -221,7 +223,7 @@
     -webkit-line-clamp: 3;
 }
 
-#text {
+.text {
     height: 100%;
     width: 100%;
     font-size: 13px;
@@ -235,7 +237,7 @@
     height: 200px;
 }
 
-#forum_talkingImg {
+.forum_talkingImg {
     width: 200px;
     height: 200px;
 }
@@ -248,18 +250,18 @@
     height: 25px;
 }
 
-#time,
-#likeNum,
-#likeImg {
+.time,
+.likeNum,
+.likeImg {
     position: absolute;
     display: inline-block;
 }
 
-#likeNum {
+.likeNum {
     right: 5%;
 }
 
-#likeImg {
+.likeImg {
     bottom: 3px;
     right: 8%;
     cursor: pointer;
@@ -345,6 +347,18 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+}
+
+.changeUserPersonalMessage_title {
+    height: 50px;
+    width: 510px;
+    margin-top: 5px;
+    margin-left: 40px;
+    line-height: 50px;
+    font-size: 20px;
+    /* font-weight: bold; */
+    border-bottom: 3px solid gray;
+    letter-spacing: 5px;
 }
 
 
@@ -435,13 +449,25 @@
 .deleteBox {
     background-color: #fff;
     width: 550px;
-    height: 300px;
+    height: 400px;
     border: 0;
     border-radius: 5px;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+}
+
+.deleteBox_title {
+    height: 70px;
+    width: 510px;
+    margin-top: 5px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 20px;
+    /* font-weight: bold; */
+    border-bottom: 3px solid gray;
+    letter-spacing: 5px;
 }
 
 

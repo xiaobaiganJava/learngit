@@ -1,4 +1,4 @@
-.deleteBox_background {
+.deleteTalkingBox_background {
     position: relative;
     height: 700px;
     width: 100%;
@@ -8,7 +8,45 @@
 .deleteTalking_box {
     position: absolute;
     top: 20%;
+    left: 25%;
     height: 400px;
     width: 800px;
-    background-color: pink;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.deleteTalking_title {
+    height: 70px;
+    width: 760px;
+    margin-top: 20px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    /* font-weight: bold; */
+    border-bottom: 3px solid gray;
+    letter-spacing: 5px;
+}
+
+.deleteTalking_id {
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 0;
+    border-bottom: 2px solid gainsboro;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+}
+
+.deleteTalking_button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 400px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
 }

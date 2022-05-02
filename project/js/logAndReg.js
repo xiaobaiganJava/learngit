@@ -159,10 +159,10 @@ register_personMessageButton.onclick = function() {
             alert('注册成功');
             login.style.display = 'block';
             register.style.display = 'none';
-            // register_personMessage_username.value = '';
-            // register_personMessage_password1.value = '';
-            // register_personMessage_email.value = '';
-            // register_personMessage_password1.value = '';
+            register_personMessage_username.value = "";
+            register_personMessage_password.value = "";
+            register_personMessage_email.value = "";
+            register_personMessage_password1.value = "";
             console.log(tips.msg);
         }
     });
@@ -190,12 +190,11 @@ login_personMessageButton.onclick = function() {
             setCookie("username", login_personMessage_username.value);
             setCookie("password", login_personMessage_password.value);
             setCookie("headImg", tips.data.headImg);
-            // 主页导航栏的头像和用户名显示
-
             // 去往主页
             window.location = "homepage.html";
-            topBar_username.innerHTML = getCookie(username);
-            // topBar_userHeadImg.src = "http://" + getCookie(headImg);
+            // 清楚登录的账号密码
+            login_personMessage_username.value = "";
+            login_personMessage_password.value = "";
         } else {
             alert('用户名或密码错误');
         }
@@ -224,8 +223,8 @@ login_personMessageButton1.onclick = function() {
             setCookie("password", login_personMessage_password1.value);
             setCookie("headImg", tips.data.headImg);
             window.location = "homepage.html";
-            topBar_username.innerHTML = getCookie("mailname");
-
+            login_personMessage_email.value = "";
+            login_personMessage_password1.value = "";
         } else {
             alert('邮箱或密码错误');
         }
@@ -234,6 +233,14 @@ login_personMessageButton1.onclick = function() {
 
 // 七天免登陆 
 // 这样判断不行  你那勾当你刷新页面他自动变为false的  应该把你的勾也存到cookie  或者加个js的tag值来判断是不是打过勾
+// login_personMessageButton.addEventListener("click", function() {
+// if (freeLogin_button.checked) {
+//     flag = 1;
+// } else {
+//     flag = 0;
+// }
+// console.log(freeLogin_button.checked);
 if (getCookie("password") != "") {
     window.location = "homepage.html";
 }
+// });

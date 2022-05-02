@@ -2,6 +2,7 @@
 var usernameLogin = document.querySelector('.login_personMessage');
 var emailLogin = document.querySelector('.login_personMessageEmail');
 
+
 // 登录
 var login_background = document.querySelector('.login_background');
 var login_close = document.querySelectorAll('.login_close');
@@ -14,6 +15,8 @@ var login_personMessage_username = document.querySelector('.login_personMessage_
 var login_personMessage_email = document.querySelector('.login_personMessage_email');
 var login_personMessageButton = document.querySelector('.login_personMessageButton');
 var login_personMessageButton1 = document.querySelector('.login_personMessageButton1');
+var freeLogin_button = document.querySelector('.freeLogin_button');
+
 
 // 注册
 var register = document.querySelector('.register');
@@ -27,6 +30,7 @@ var register_personMessage_username = document.querySelector('.register_personMe
 var register_personMessage_email = document.querySelector('.register_personMessage_email');
 var register_personMessageButton = document.querySelector('.register_personMessageButton');
 
+
 // 正则提示
 var registerPasswordTips = document.querySelector('.register_passwordTips');
 var registerUsernameTips = document.querySelector('.register_usernameTips');
@@ -35,8 +39,10 @@ var registerPasswordTips1 = document.querySelector('.register_passwordTips1');
 var loginPasswordTips = document.querySelector('.login_passwordTips');
 var loginPasswordTips1 = document.querySelector('.login_passwordTips1');
 
+
 // 七天免登陆
 var freeLogin_button = document.querySelector('.freeLogin_button');
+
 
 // 修改密码
 var changePassword_oldPasswordBox = document.querySelector('.changePassword_oldPasswordBox');
@@ -55,11 +61,17 @@ var changePassword_code = document.querySelector('.changePassword_code');
 var changePassword_getCode = document.querySelector('.changePassword_getCode');
 var changePassword_newPassword1 = document.querySelector('.changePassword_newPassword1');
 
-// forum
+
+// forum动态(包含顶部导航栏)
 var forum = document.querySelector('.forum');
 var topBar_username = document.querySelector(".topBar_username");
 var topBar_allTalking = document.querySelector('.topBar_allTalking');
+var topBar_hotTalking = document.querySelector('.topBar_hotTalking');
+var topBar_createTalking = document.querySelector('.topBar_createTalking');
+var topBar_deleteTalking = document.querySelector('.topBar_deleteTalking');
+var userHeadImg = document.getElementById('userHeadImg');
 var topBar_userInfo = document.querySelector('.topBar_userInfo');
+var topBar_userHeadImg = document.querySelector('.topBar_userHeadImg');
 var topBar_submenu = document.querySelector('.topBar_submenu');
 var submenu_username = document.querySelector('.submenu_username');
 var submenu_logOut = document.querySelector('.submenu_logOut');
@@ -67,14 +79,22 @@ var forum_container = document.querySelector('.forum_container');
 var submenu_username = document.querySelector('.submenu_username');
 var forum_content = document.querySelector('.forum_content');
 var likeImg = document.querySelector('likeImg');
+var topBar_search = document.querySelector('.topBar_search');
+var topBar_searchImg = document.querySelector('.topBar_searchImg');
+
+
+// 个人信息
+var PersonalMessage_Id = document.querySelector('.PersonalMessage_Id');
+var PersonalMessage_username = document.querySelector('.PersonalMessage_username');
+var PersonalMessage_sex = document.querySelector('.PersonalMessage_sex');
+var PersonalMessage_age = document.querySelector('.PersonalMessage_age');
+var PersonalMessage_phone = document.querySelector('.PersonalMessage_phone');
+var PersonalMessage_email = document.querySelector('.PersonalMessage_email');
+var headImg_box = document.querySelector('.headImg_box');
 var personalHomePage = document.querySelector('.personalHomePage');
 var headImg_button = document.querySelector('.headImg_button');
 var headImg = document.querySelector('.headImg');
-var topBar_userHeadImg = document.querySelector('.topBar_userHeadImg');
-var headImg_box = document.querySelector('.headImg_box');
-var topBar_hotTalking = document.querySelector('.topBar_hotTalking');
-var topBar_createTalking = document.querySelector('.topBar_createTalking');
-var topBar_deleteTalking = document.querySelector('.topBar_deleteTalking');
+
 
 // 修改个人信息
 var changeMessage_background = document.querySelector('.changeMessage_background');
@@ -90,6 +110,7 @@ var changeUserSex = document.querySelector('.changeUser_sex');
 var changeUserAge = document.querySelector('.changeUser_age');
 var changeUserButton = document.querySelector('.changeUserButton');
 
+
 // 删除账号部分
 var deleteBox_background = document.querySelector('.deleteBox_background');
 var deleteBox = document.querySelector('.deleteBox');
@@ -100,8 +121,16 @@ var delete_password = document.querySelector('.delete_password');
 var deleteButton = document.querySelector('.delete_button');
 var deleteReturnHomepage = document.querySelector('.delete_returnHomepage');
 
+
 // 新增动态
+var createTalking_title = document.querySelector('.createTalking_title');
+var createTalking_content = document.querySelector('.createTalking_content');
+var createTalking_button = document.querySelector('.createTalking_button');
+var createTalking_img = document.querySelector('.createTalking_img');
+var createTalking_imgButton = document.querySelector('.createTalking_imgButton');
+var TalkingImg_box = document.querySelector('.TalkingImg_box');
 
-// 热门动态
 
-// 删除头态
+// 删除动态
+var deleteTalking_id = document.querySelector('.deleteTalking_id');
+var deleteTalking_button = document.querySelector('.deleteTalking_button');

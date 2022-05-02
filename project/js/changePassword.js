@@ -56,6 +56,9 @@ changePassword_button.onclick = function() {
             alert('修改成功');
             login.style.display = 'block';
             changePassword.style.display = 'none';
+            changePassword_username.value = "";
+            changePassword_oldPassword.value = "";
+            changePassword_newPassword.value = "";
         } else {
             alert('修改失败');
             console.log(tips.msg);
@@ -114,6 +117,9 @@ changePassword_button1.onclick = function() {
             alert('修改成功');
             login.style.display = 'block';
             changePassword.style.display = 'none';
+            changePassword_email.value = "";
+            changePassword_code.value = "";
+            changePassword_newPassword1.value = "";
         } else {
             alert('修改失败');
             console.log(tips.msg);

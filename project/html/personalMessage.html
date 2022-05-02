@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/forum.css">
     <title>个人信息</title>
 </head>
-<link rel="stylesheet" href="../css/base.css">
-<link rel="stylesheet" href="../css/forum.css">
 
 <body>
     <div class="forum">
@@ -31,6 +31,7 @@
                     <span class="topBar_username"></span>
                     <ul class="topBar_submenu">
                         <li class="submenu_username"><a href="#">个人信息</a></li>
+                        <li class="submenu_photoAlbum"><a href="#">个人相册</a></li>
                         <li class="submenu_logOut"><a href="#">退出登录</a></li>
                     </ul>
                 </div>
@@ -47,12 +48,12 @@
                     <input type="file" class="headImg_button">
                 </div>
                 <div class="userPersonalMessage_box">
-                    <div class="PersonalMessage_Id">ID:</div>
-                    <div class="PersonalMessage_username">用户名:</div>
-                    <div class="PersonalMessage_sex">性别:</div>
-                    <div class="PersonalMessage_age">年龄:</div>
-                    <div class="PersonalMessage_phone">手机:</div>
-                    <div class="PersonalMessage_email">邮箱:</div>
+                    <div class="PersonalMessage_Id"></div>
+                    <div class="PersonalMessage_username"></div>
+                    <div class="PersonalMessage_sex"></div>
+                    <div class="PersonalMessage_age"></div>
+                    <div class="PersonalMessage_phone"></div>
+                    <div class="PersonalMessage_email"></div>
                     <button class="delete_userButton">删除账号</button>
                     <button class="changePeasonalMessage_button">修改个人信息</button>
                 </div>
@@ -60,6 +61,9 @@
             <!-- 修改个人信息 -->
             <div class="changeMessage_background">
                 <div class="changeuserPersonalMessage_box">
+                    <div class="changeUserPersonalMessage_title">
+                        修改个人信息
+                    </div>
                     <div class="changeUserContent">
                         <input type="text" class="changeUser_id" placeholder="请输入ID">
                         <input type="text" class="changeUser_username" placeholder="请输入用户名">
@@ -75,6 +79,7 @@
             <!-- 删除账号 -->
             <div class="deleteBox_background">
                 <div class="deleteBox">
+                    <div class="deleteBox_title">删除账号</div>
                     <input type="text" class="delete_username" placeholder="请输入用户名">
                     <input type="text" class="delete_email" placeholder="请输入邮箱">
                     <input type="text" class="delete_password" placeholder="请输入密码">
@@ -88,6 +93,7 @@
     <script src="../js/ajaxFunction.js"></script>
     <script src="../js/cookieFunction.js"></script>
     <script src="../js/personalMessage.js"></script>
+    <script src="../js/forum.js"></script>
 </body>
 
 </html>

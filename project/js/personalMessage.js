@@ -18,7 +18,20 @@ topBar_deleteTalking.addEventListener("click", function() {
     window.location = "deleteTalking.html";
 });
 
-
+// 设置用户信息和头像
+if (getCookie("password") != '') {
+    topBar_userHeadImg.src = "http://" + getCookie("headImg");
+    topBar_username.innerHTML = getCookie("username");
+}
+// 展示个人信息部分
+(function() {
+    PersonalMessage_Id.innerHTML = 'ID:' + changeUserId.value;
+    PersonalMessage_username.innerHTML = '用户名:' + changeUserName.value;
+    PersonalMessage_sex.innerHTML = '性别:' + changeUserSex.value;
+    PersonalMessage_age.innerHTML = '年龄:' + changeUserAge.value;
+    PersonalMessage_phone.innerHTML = '手机:' + changeUserPhone.value;
+    PersonalMessage_email.innerHTML = '邮箱:' + changeUserEmail.value;
+})();
 // 修改个人信息部分
 // 打开修改信息栏
 changePeasonalMessage_button.addEventListener("click", function() {
@@ -56,6 +69,19 @@ changeUserButton.onclick = function() {
         console.log(res);
         if (tips.code === 200) {
             alert('修改成功');
+            PersonalMessage_Id.innerHTML = 'ID:' + changeUserId.value;
+            PersonalMessage_username.innerHTML = '用户名:' + changeUserName.value;
+            PersonalMessage_sex.innerHTML = '性别:' + changeUserSex.value;
+            PersonalMessage_age.innerHTML = '年龄:' + changeUserAge.value;
+            PersonalMessage_phone.innerHTML = '手机:' + changeUserPhone.value;
+            PersonalMessage_email.innerHTML = '邮箱:' + changeUserEmail.value;
+            // document.cookie = "username =changeUserName.value;
+            changeUserId.value = "";
+            changeUserName.value = "";
+            changeUserEmail.value = "";
+            changeUserPhone.value = "";
+            changeUserSex.value = "";
+            changeUserAge.value = "";
         } else {
             alert('修改失败');
         }
@@ -116,6 +142,9 @@ deleteButton.onclick = function() {
         console.log(res);
         if (tips.code === 200) {
             alert('删除成功');
+            delete_username.value = "";
+            delete_email.value = "";
+            delete_password.value = "";
         } else {
             alert('删除失败');
         }

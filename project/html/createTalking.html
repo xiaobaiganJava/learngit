@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>发布动态</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/forum.css">
     <link rel="stylesheet" href="../css/createTalking.css">
+    <title>发布动态</title>
 </head>
 
 <body>
@@ -44,9 +44,11 @@
         </div>
         <div class="createTalkingBox_background">
             <div class="createTalking_box">
+                <div class="createTalking_boxTitle">新建动态</div>
                 <input type="text" class="createTalking_title" placeholder="请输入你的动态标题">
-                <input type="text" class="createTalking_content" placeholder="在此处输入内容">
-                <input type="file" class="createTalking_img">
+                <textarea name="" id="" cols="30" rows="10" class="createTalking_content" placeholder="在此处输入主要内容"></textarea>
+                <input type="file" class="createTalking_imgButton">
+                <div class="talkingImg_box"></div>
                 <button class="createTalking_button">确认发布</button>
             </div>
         </div>
@@ -54,6 +56,7 @@
     <script src="../js/allElements.js"></script>
     <script src="../js/ajaxFunction.js"></script>
     <script src="../js/cookieFunction.js"></script>
+    <script src="../js/createTalking.js"></script>
     <script src="../js/forum.js"></script>
 </body>
 

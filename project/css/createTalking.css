@@ -1,29 +1,41 @@
 .createTalkingBox_background {
     position: relative;
-    height: 700px;
+    height: 900px;
     width: 100%;
     background-color: skyblue;
 }
 
 .createTalking_box {
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 25%;
-    height: 600px;
+    height: 700px;
     width: 800px;
     border-radius: 25px;
     background-color: white;
 }
 
+.createTalking_boxTitle {
+    height: 70px;
+    width: 760px;
+    margin-top: 20px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    /* font-weight: bold; */
+    border-bottom: 3px solid gray;
+    letter-spacing: 5px;
+}
+
 .createTalking_title,
 .createTalking_content,
-.createTalking_img {
+.createTalking_imgButton {
     display: block;
 }
 
 .createTalking_title {
-    margin-top: 50px;
-    margin-left: 75px;
+    margin-top: 30px;
+    margin-left: 40px;
     border: 0;
     border-bottom: 2px solid gainsboro;
     width: 400px;
@@ -33,11 +45,43 @@
 }
 
 .createTalking_content {
-    margin-top: 50px;
-    margin-left: 75px;
+    margin-top: 30px;
+    margin-left: 40px;
     border: 1px solid gainsboro;
     width: 600px;
     height: 200px;
-    vertical-align: top;
     outline: none;
+    resize: none;
+    font-size: 16px;
+    font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+.createTalking_imgButton {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.talkingImg_box {
+    width: 760px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.createTalking_img {
+    width: 100px;
+    height: 100px;
+}
+
+.createTalking_button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 400px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
 }
