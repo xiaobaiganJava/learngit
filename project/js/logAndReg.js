@@ -46,8 +46,7 @@ register_returnLogin.onclick = function() {
 }
 
 // 七天免登陆 
-freeLogin_button.checked = true;
-if (freeLogin_button.checked = true && getCookie("password") != "") {
+if (getCookie("password") != "") {
     window.location = "homepage.html";
 }
 // 显示密码与遮盖密码
