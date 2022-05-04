@@ -45,6 +45,11 @@ register_returnLogin.onclick = function() {
     register.style.display = 'none';
 }
 
+// 七天免登陆 
+freeLogin_button.checked = true;
+if (freeLogin_button.checked = true && getCookie("password") != "") {
+    window.location = "homepage.html";
+}
 // 显示密码与遮盖密码
 function Eyeclose(password, eyeclose) {
     return function() {
@@ -239,10 +244,4 @@ login_personMessageButton1.onclick = function() {
             alert('邮箱或密码错误');
         }
     });
-}
-
-// 七天免登陆 
-
-if (getCookie("password") != "") {
-    window.location = "homepage.html";
 }
