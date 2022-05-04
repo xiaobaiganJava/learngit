@@ -69,7 +69,6 @@ function updatePhotoAlbum() {
     let PhotoAlbumJSONString = JSON.stringify(searchPhotoAlbumJSON);
     let PhotoAlbumData = getJSON('POST', 'http://175.178.51.126:8091/smallA/selectAlbumByUid', PhotoAlbumJSONString).then(res => {
         let tips = JSON.parse(res);
-        console.log(tips);
         // 预载好用户id返回的相册信息，然后更新全局变量userPhotoId,每次调用都可以更新
         userPhotoId = tips;
         if (tips.code >= 200 && tips.code < 300) {
@@ -83,16 +82,17 @@ function updatePhotoAlbum() {
 
 //事件委托
 photoAlbum_wrap.addEventListener("click", function(e) {
+
     // 删除相册
     if (e.target.className == "deletePhotoAlbum") {
         let dePhotoAlbumId = e.target.getAttribute("data-deleteid");
         let dePhotoAlbumJSON = {
             "id": dePhotoAlbumId,
         }
+
         let dePhotoAlbumJSONString = JSON.stringify(dePhotoAlbumJSON);
         let dePhotoAlbumData = getJSON('POST', 'http://175.178.51.126:8091/smallA/deleteAlbum', dePhotoAlbumJSONString).then(res => {
             let tips = JSON.parse(res);
-            console.log(tips);
             if (tips.code >= 200 && tips.code < 300) {
                 updatePhotoAlbum();
             } else {
@@ -110,24 +110,28 @@ photoAlbum_wrap.addEventListener("click", function(e) {
             if (selectPhotoAlbumId == userPhotoId.data[i].id) {
                 photo_Title.innerHTML = '';
                 let selectPhotoAlbumName = userPhotoId.data[i].name;
-                console.log(selectPhotoAlbumName);
                 photo_Title.innerHTML = selectPhotoAlbumName;
                 for (let j = 0; j < userPhotoId.data[i].photos.length; j++) {
                     photoAlbum_box.style.display = 'none';
                     photo_box.style.display = 'block';
-                    photo_wrap.innerHTML = photo_wrap.innerHTML + ` <div class="photo"><img src="http://${userPhotoId.data[i].photos[j].img}" alt="" class="eachphoto"></div>`
+                    photo_wrap.innerHTML = photo_wrap.innerHTML + ` <div class = "eachPhoto_box"><div class="photo"><img src="http://${userPhotoId.data[i].photos[j].img}" alt="" class="eachphoto">
+                    <a href="#" class="deletePhoto" data-delphotoid=${userPhotoId.data[i].photos[j].img}></a></div>`
                 }
             }
         }
-    }
+    };
+
 });
 
 // 添加图片
+inputPhoto_button.addEventListener("click", function() {
+    inputPhoto.click();
+});
 inputPhoto.addEventListener("change", function() {
     let url = window.URL.createObjectURL(inputPhoto.files[0]);
     let str = '<img src = "' + url + '" class="eachphoto">';
     inputPhotoBox.innerHTML += str;
-    console.log(str);
+
 });
 photo_button.addEventListener("click", function() {
     let formdata = new FormData();
@@ -144,5 +148,22 @@ photo_button.addEventListener("click", function() {
                 console.log('上传成功');
             }
         }
+    }
+});
+photo_box.addEventListener("click", function(e) {
+    // 删除照片
+    if (e.target.className == "deletePhoto") {
+        let deletePhotoId = e.target.getAttribute("data-delphotoid");
+        let dePhotoJSON = {
+            "id": deletePhotoId,
+        }
+        let dePhotoJSONString = JSON.stringify(dePhotoJSON);
+        let dePhotoData = getJSON('POST', 'http://175.178.51.126:8091/smallA/deletePhoto', dePhotoJSONString).then(res => {
+            let tips = JSON.parse(res);
+            console.log(tips);
+            if (tips.code >= 200 && tips.code < 300) {
+                console.log('删除成功');
+            }
+        })
     }
 });

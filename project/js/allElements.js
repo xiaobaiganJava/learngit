@@ -95,6 +95,7 @@ var headImg_box = document.querySelector('.headImg_box');
 var personalHomePage = document.querySelector('.personalHomePage');
 var headImg_button = document.querySelector('.headImg_button');
 var headImg = document.querySelector('.headImg');
+var headImgButton = document.querySelector('.headImgButton');
 
 
 // 修改个人信息
@@ -129,7 +130,8 @@ var createTalking_content = document.querySelector('.createTalking_content');
 var createTalking_button = document.querySelector('.createTalking_button');
 var createTalking_img = document.querySelector('.createTalking_img');
 var createTalking_imgButton = document.querySelector('.createTalking_imgButton');
-var TalkingImg_box = document.querySelector('.TalkingImg_box');
+var inputimg_button = document.querySelector('.inputimg_button');
+var talkingImg_box = document.querySelector('.talkingImg_box');
 
 
 // 删除动态
@@ -157,6 +159,7 @@ var photo_createBox = document.querySelector('.photo_createBox');
 var photo_Title = document.querySelector('.photo_Title');
 var photoReturnPhotoAlbum = document.querySelector('.photoReturnPhotoAlbum');
 var photo_returnButton = document.querySelector('.photo_returnButton');
+var inputPhoto_button = document.querySelector('.inputPhoto_button');
 
 // 详情部分
 var forum_Viewmore = document.querySelector('.forum_Viewmore');

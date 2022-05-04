@@ -59,6 +59,17 @@
 .createTalking_imgButton {
     margin-left: 40px;
     margin-top: 10px;
+    display: none;
+}
+
+.inputimg_button {
+    margin-left: 40px;
+    height: 30px;
+    width: 60px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
 }
 
 .talkingImg_box {

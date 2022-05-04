@@ -36,7 +36,6 @@ if (getCookie("password") != '') {
             PersonalMessage_age.innerHTML = '年龄:' + tips.data.age;
             PersonalMessage_phone.innerHTML = '手机:' + tips.data.phone;
             PersonalMessage_email.innerHTML = '邮箱:' + tips.data.email;
-            headImg.src = 'http://' + tips.data.headImg;
         }
     })
 })();
@@ -98,6 +97,9 @@ changeUserButton.onclick = function() {
 }
 
 // 上传头像 
+headImgButton.addEventListener("click", function() {
+    headImg_button.click();
+})
 headImg_button.addEventListener("change", function() {
     let url = window.URL.createObjectURL(headImg_button.files[0]);
     let str = '<img src = "' + url + '" class="headImg">';

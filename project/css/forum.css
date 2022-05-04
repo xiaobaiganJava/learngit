@@ -319,7 +319,11 @@
 
 .forum_changePage button {
     height: 30px;
+    width: 50px;
     font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -352,7 +356,18 @@
     position: absolute;
     top: 50%;
     left: 37%;
-    color: transparent;
+    display: none;
+}
+
+.headImgButton {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
 }
 
 .userPersonalMessage_box {

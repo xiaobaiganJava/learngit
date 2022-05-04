@@ -4,12 +4,14 @@ if (getCookie("password") != '') {
     topBar_username.innerHTML = getCookie("username");
 }
 // 上传动态图片 
+inputimg_button.addEventListener("click", function() {
+    createTalking_imgButton.click();
+})
 createTalking_imgButton.addEventListener("change", function() {
     let url = window.URL.createObjectURL(createTalking_imgButton.files[0]);
     let str = '<img src = "' + url + '" class="createTalking_img">';
-    TalkingImg_box.innerHTML += str;
+    talkingImg_box.innerHTML += str;
 });
-
 // 把新建动态的信息传到eolink
 createTalking_button.addEventListener("click", function() {
     let formdata = new FormData();

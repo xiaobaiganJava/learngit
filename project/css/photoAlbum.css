@@ -228,11 +228,29 @@
     cursor: pointer;
 }
 
+.eachPhoto_box {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
 .eachphoto {
     display: inline-block;
     width: 150px;
     height: 150px;
-    cursor: none;
+    cursor: auto;
+}
+
+.deletePhoto {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    background: url(../image/shut.png) no-repeat;
+    background-size: 15px 15px;
+    height: 20px;
+    width: 20px;
 }
 
 
@@ -275,6 +293,17 @@
     display: block;
     margin-top: 15px;
     margin-left: 40px;
+    display: none;
+}
+
+.inputPhoto_button {
+    margin-left: 40px;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .inputPhotoBox {
