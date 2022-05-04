@@ -1,0 +1,305 @@
+/* 相册首页 */
+
+.photoAlbum_backgound {
+    position: relative;
+    margin-top: 50px;
+    left: 14%;
+    width: 1100px;
+    height: 900px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.photoAlbum_box {
+    position: relative;
+    top: 7.5%;
+    left: 4.5%;
+    width: 1000px;
+    height: 800px;
+    background-color: wheat;
+}
+
+.photoAlbum_title {
+    height: 70px;
+    width: 930px;
+    margin-top: 30px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom: 3px solid white;
+    letter-spacing: 5px;
+}
+
+.photoAlbum_createButton {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 70px;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
+    border: 1px solid #9e8c5f;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.photoAlbum_wrap {
+    width: 1000px;
+    height: 725px;
+}
+
+.eachPhotoAlbum_container {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 180px;
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.eachPhotoAlbum {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.deletePhotoAlbum {
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    background: url(../image/shut.png) no-repeat;
+    background-size: 15px 15px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+/* 新建相册 */
+
+.photoAlbum_createTitle {
+    height: 70px;
+    width: 900px;
+    margin-top: 30px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom: 3px solid white;
+    letter-spacing: 5px;
+}
+
+.photoAlbum_createBox {
+    position: relative;
+    top: 7.5%;
+    left: 4.5%;
+    width: 1000px;
+    height: 800px;
+    background-color: wheat;
+}
+
+.photoAlbum_name,
+.photoAlbum_introduction {
+    display: block;
+}
+
+.photoAlbum_name {
+    margin-top: 30px;
+    margin-left: 300px;
+    border: 0;
+    border-bottom: 2px solid gainsboro;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    text-indent: 10px;
+}
+
+.photoAlbum_introduction {
+    width: 600px;
+    height: 200px;
+    resize: none;
+    margin: 0 200px;
+    margin-top: 30px;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+    font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+.photoAlbum_button {
+    position: absolute;
+    color: white;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.returnPhotoAlbum {
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translate(-50%, 0);
+}
+
+.photoAlbum {
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* 相册内部 */
+
+.photo_box {
+    position: relative;
+    top: 7.5%;
+    left: 4.5%;
+    width: 1000px;
+    height: 800px;
+    background-color: wheat;
+    display: none;
+}
+
+.photo_Title {
+    height: 70px;
+    width: 930px;
+    margin-top: 30px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom: 3px solid white;
+    letter-spacing: 5px;
+}
+
+.photo_createButton {
+    position: absolute;
+    top: 2%;
+    right: 15%;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #9e8c5f;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    margin-left: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.photo_returnButton {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #9e8c5f;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    margin-left: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.photo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.eachphoto {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    cursor: none;
+}
+
+
+/* 添加图片 */
+
+.photo_createBox {
+    position: relative;
+    top: 7.5%;
+    left: 4.5%;
+    width: 1000px;
+    height: 800px;
+    background-color: wheat;
+    display: none;
+}
+
+.photo_createTitle {
+    height: 70px;
+    width: 900px;
+    margin-top: 30px;
+    margin-left: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom: 3px solid white;
+    letter-spacing: 5px;
+}
+
+.photo_id {
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 0;
+    border-bottom: 2px solid gainsboro;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    text-indent: 10px;
+}
+
+.inputPhoto {
+    display: block;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.inputPhotoBox {
+    margin-left: 40px;
+    width: 960px;
+    height: 310px;
+}
+
+.photo_button {
+    position: absolute;
+    color: white;
+    bottom: 27%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.photoReturnPhotoAlbum {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 0);
+}

@@ -4,10 +4,6 @@
 }
 
 body {
-    flex-direction: column-reverse;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: skyblue;
 }
 

@@ -81,6 +81,7 @@ var forum_content = document.querySelector('.forum_content');
 var likeImg = document.querySelector('likeImg');
 var topBar_search = document.querySelector('.topBar_search');
 var topBar_searchImg = document.querySelector('.topBar_searchImg');
+var forum_usernameAndHeadImg = document.querySelector('.forum_usernameAndHeadImg');
 
 
 // 个人信息
@@ -132,5 +133,34 @@ var TalkingImg_box = document.querySelector('.TalkingImg_box');
 
 
 // 删除动态
-var deleteTalking_id = document.querySelector('.deleteTalking_id');
-var deleteTalking_button = document.querySelector('.deleteTalking_button');
+var deleteTalking = document.querySelector('.deleteTalking');
+
+// 相册
+var submenu_photoAlbum = document.querySelector('.submenu_photoAlbum');
+var photoAlbum_createButton = document.querySelector('.photoAlbum_createButton');
+var photoAlbum_box = document.querySelector('.photoAlbum_box');
+var photoAlbum_wrap = document.querySelector('.photoAlbum_wrap');
+var photoAlbum_createBox = document.querySelector('.photoAlbum_createBox');
+var photoAlbum_button = document.querySelector('.photoAlbum_button');
+var photoAlbum_introduction = document.querySelector('.photoAlbum_introduction');
+var photoAlbum_name = document.querySelector('.photoAlbum_name');
+var returnPhotoAlbum = document.querySelector('.returnPhotoAlbum');
+var photo_box = document.querySelector('.photo_box');
+var photo_createButton = document.querySelector('.photo_createButton');
+var photo = document.querySelector('.photo');
+var deletePhotoAlbum = document.querySelector('.deletePhotoAlbum');
+var photo_wrap = document.querySelector('.photo_wrap');
+var photo_button = document.querySelector('.photo_button');
+var inputPhotoBox = document.querySelector('.inputPhotoBox');
+var inputPhoto = document.querySelector('.inputPhoto');
+var photo_createBox = document.querySelector('.photo_createBox');
+var photo_Title = document.querySelector('.photo_Title');
+var photoReturnPhotoAlbum = document.querySelector('.photoReturnPhotoAlbum');
+var photo_returnButton = document.querySelector('.photo_returnButton');
+
+// 详情部分
+var forum_Viewmore = document.querySelector('.forum_Viewmore');
+var inputComment = document.querySelector('.inputComment');
+var comment_submit = document.querySelector('.comment_submit');
+var comment_box = document.querySelector('.comment_box');
+var comment_wrap = document.querySelector('.comment_wrap');

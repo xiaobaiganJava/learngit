@@ -181,7 +181,7 @@ login_personMessageButton.onclick = function() {
     let loginUserJSONString = JSON.stringify(loginUserJSON);
     let loginData = getJSON('POST', 'http://175.178.51.126:8091/smallA/login', loginUserJSONString).then(res => {
         let tips = JSON.parse(res)
-        console.log(res);
+        console.log(tips);
         if (tips.code === 200) {
             alert('登录成功');
             // 登录成功这里面加入cookie  登录操作必须在等服务器那边给你回应才能实现  而不是随随便便就存上去的  
@@ -192,7 +192,17 @@ login_personMessageButton.onclick = function() {
             setCookie("headImg", tips.data.headImg);
             // 去往主页
             window.location = "homepage.html";
-            // 清楚登录的账号密码
+            // 获取展示个人信息部分
+            (function() {
+                PersonalMessage_Id.innerHTML = 'ID:' + tips.data.id;
+                PersonalMessage_username.innerHTML = '用户名:' + tips.data.username;
+                PersonalMessage_sex.innerHTML = '性别:' + tips.data.sex;
+                PersonalMessage_age.innerHTML = '年龄:' + tips.data.age;
+                PersonalMessage_phone.innerHTML = '手机:' + tips.data.phone;
+                PersonalMessage_email.innerHTML = '邮箱:' + tips.data.email;
+            })();
+
+            // 清除登录的账号密码
             login_personMessage_username.value = "";
             login_personMessage_password.value = "";
         } else {
@@ -214,7 +224,7 @@ login_personMessageButton1.onclick = function() {
     let loginUserJSONString = JSON.stringify(loginUserJSON);
     let loginData = getJSON('POST', 'http://175.178.51.126:8091/smallA/login', loginUserJSONString).then(res => {
         let tips = JSON.parse(res)
-        console.log(res);
+        console.log(tips);
         if (tips.code === 200) {
             alert('登陆成功');
             console.log(tips.data.id);
@@ -232,15 +242,7 @@ login_personMessageButton1.onclick = function() {
 }
 
 // 七天免登陆 
-// 这样判断不行  你那勾当你刷新页面他自动变为false的  应该把你的勾也存到cookie  或者加个js的tag值来判断是不是打过勾
-// login_personMessageButton.addEventListener("click", function() {
-// if (freeLogin_button.checked) {
-//     flag = 1;
-// } else {
-//     flag = 0;
-// }
-// console.log(freeLogin_button.checked);
+
 if (getCookie("password") != "") {
     window.location = "homepage.html";
 }
-// });

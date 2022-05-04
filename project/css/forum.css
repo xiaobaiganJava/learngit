@@ -2,6 +2,7 @@
     max-width: 1600px;
     min-width: 1000px;
     background-color: skyblue;
+    margin: 0 auto;
 }
 
 
@@ -47,8 +48,7 @@
 
 .topBar .topBar_allTalking,
 .topBar .topBar_hotTalking,
-.topBar .topBar_createTalking,
-.topBar .topBar_deleteTalking {
+.topBar .topBar_createTalking {
     margin: 0;
     font-weight: normal;
     line-height: 70px;
@@ -130,29 +130,6 @@
 }
 
 
-/* 改变主题 */
-
-.changeTheme {
-    height: 100%;
-    width: 100px;
-    position: absolute;
-    top: 0;
-    right: 100px;
-}
-
-.changeTheme_text {
-    line-height: 70px;
-}
-
-.changeTheme_img {
-    position: absolute;
-    top: 25px;
-    height: 20px;
-    width: 60px;
-    margin-left: 10px;
-}
-
-
 /* 动态部分 */
 
 .forum_root {
@@ -170,11 +147,31 @@
 .forum_content {
     position: relative;
     margin: 50px auto;
+    margin-bottom: 0;
     width: 900px;
     height: 600px;
     background-color: white;
     border-radius: 20px;
     z-index: 1;
+}
+
+.change {
+    position: relative;
+    margin: 50px auto;
+    width: 900px;
+    height: 1200px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.deleteTalking {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 }
 
 .forum_usernameAndHeadImg {
@@ -208,6 +205,15 @@
     line-height: 50px;
 }
 
+.forum_title_change {
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+}
+
 .title {
     font-size: 20px;
 }
@@ -216,30 +222,62 @@
     position: absolute;
     top: 25%;
     left: 10%;
-    width: 700px;
-    height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+    width: 600px;
+    height: 150px;
+}
+
+.forum_text_change {
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    width: 600px;
+    height: 250px;
 }
 
 .text {
     height: 100%;
     width: 100%;
     font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text_change {
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+}
+
+.forum_Viewmore {
+    position: absolute;
+    bottom: 5.7%;
+    right: 7%;
+    cursor: pointer;
 }
 
 .forum_Img {
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     left: 10%;
-    width: 600px;
+    width: 650px;
     height: 200px;
+    overflow: hidden;
 }
 
 .forum_talkingImg {
+    display: inline-block;
     width: 200px;
     height: 200px;
+    margin-left: 10px;
+}
+
+.forum_Img_change {
+    position: absolute;
+    bottom: 8%;
+    left: 9%;
+    width: 650px;
+    height: 650px;
 }
 
 .forum_timeAndLikeNum {
@@ -265,6 +303,23 @@
     bottom: 3px;
     right: 8%;
     cursor: pointer;
+}
+
+
+/* 分页 */
+
+.forum_changePage {
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.forum_changePage button {
+    height: 30px;
+    font-size: 14px;
 }
 
 
@@ -513,4 +568,18 @@
     font-size: 10px;
     height: 50px;
     line-height: 50px;
+}
+
+
+/* 底部 */
+
+#bottom {
+    width: 1519px;
+    height: 60px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 60px;
 }

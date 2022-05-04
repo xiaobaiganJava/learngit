@@ -13,33 +13,42 @@ topBar_createTalking.addEventListener("click", function() {
     window.location = "createTalking.html";
 });
 
-//打开删除动态
-topBar_deleteTalking.addEventListener("click", function() {
-    window.location = "deleteTalking.html";
-});
-
 // 设置用户信息和头像
 if (getCookie("password") != '') {
     topBar_userHeadImg.src = "http://" + getCookie("headImg");
     topBar_username.innerHTML = getCookie("username");
 }
-// 展示个人信息部分
+
+// 个人信息展现部分 重载登录来获取个人信息
 (function() {
-    PersonalMessage_Id.innerHTML = 'ID:' + changeUserId.value;
-    PersonalMessage_username.innerHTML = '用户名:' + changeUserName.value;
-    PersonalMessage_sex.innerHTML = '性别:' + changeUserSex.value;
-    PersonalMessage_age.innerHTML = '年龄:' + changeUserAge.value;
-    PersonalMessage_phone.innerHTML = '手机:' + changeUserPhone.value;
-    PersonalMessage_email.innerHTML = '邮箱:' + changeUserEmail.value;
+    let loginUserJSON = {
+        "username": getCookie("username"),
+        "password": getCookie("password")
+    }
+    let loginUserJSONString = JSON.stringify(loginUserJSON);
+    let loginUserData = getJSON('POST', 'http://175.178.51.126:8091/smallA/login', loginUserJSONString).then(res => {
+        let tips = JSON.parse(res);
+        console.log(tips);
+        if (tips.code >= 200 && tips.code < 300) {
+            PersonalMessage_Id.innerHTML = 'ID:' + tips.data.id;
+            PersonalMessage_username.innerHTML = '用户名:' + tips.data.username;
+            PersonalMessage_sex.innerHTML = '性别:' + tips.data.sex;
+            PersonalMessage_age.innerHTML = '年龄:' + tips.data.age;
+            PersonalMessage_phone.innerHTML = '手机:' + tips.data.phone;
+            PersonalMessage_email.innerHTML = '邮箱:' + tips.data.email;
+            headImg.src = 'http://' + tips.data.headImg;
+        }
+    })
 })();
 // 修改个人信息部分
+
 // 打开修改信息栏
 changePeasonalMessage_button.addEventListener("click", function() {
     personalMessage.style.display = 'none';
     changeMessage_background.style.display = 'block';
 });
-// 返回个人信息栏
 
+// 返回个人信息栏
 changeuser_returnHomepage.addEventListener("click", function() {
     personalMessage.style.display = 'block';
     changeMessage_background.style.display = 'none';
@@ -97,7 +106,7 @@ headImg_button.addEventListener("change", function() {
 headImg_button.addEventListener("change", function() {
     // 传输头像数据
     let formdata = new FormData();
-    formdata.append('username', 1744654182);
+    formdata.append('username', getCookie("username"));
     formdata.append('headImg', headImg_button.files[0]);
     console.log(headImg_button.files[0]);
     let xhr = new XMLHttpRequest();

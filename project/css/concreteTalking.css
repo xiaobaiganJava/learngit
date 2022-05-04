@@ -1,0 +1,165 @@
+.userComment_wrap {
+    position: relative;
+    height: 200px;
+    width: 900px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+
+/* 发布评论 */
+
+.inputComment {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: #f4f5f7;
+    color: #555;
+    outline: 0;
+    resize: none;
+    border: 1px solid #e5e9ef;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .6s;
+    font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+.inputComment:hover {
+    background-color: white;
+    border-color: #00a1d6;
+    transition: .6s;
+}
+
+.comment_submit {
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 17%;
+    width: 50px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #00a1d6;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* 评论图片and文本框 */
+
+.comment_wrap {
+    position: relative;
+    height: 100%;
+    width: 900px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.comment_box {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    background-color: white;
+    border-bottom: 2px solid gray;
+}
+
+.comment_boxChange {
+    height: 350px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border-bottom: 2px solid gray;
+}
+
+.comment_usernameAndHeadimg {
+    position: absolute;
+    top: 18px;
+    left: 14px;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.comment_Headimg {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.comment_username {
+    position: absolute;
+    left: 50px;
+    height: 20px;
+    width: 200px;
+}
+
+.comment_textBox {
+    position: absolute;
+    left: 65px;
+    top: 60px;
+    height: 50px;
+    width: 500px;
+}
+
+
+/* 删除评论 */
+
+.comment_deleteAndReply {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    right: 0%;
+    bottom: 0px;
+}
+
+.comment_deleteAndReplyChange {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    right: 0%;
+    bottom: 100px;
+}
+
+.comment_delete,
+.comment_reply {
+    margin-left: 20px;
+    width: 60px;
+    height: 30px;
+    border: 0;
+    background-color: #00a1d6;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.comment_allReply {
+    position: absolute;
+    left: 20px;
+    bottom: 12px;
+    width: 170px;
+    height: 30px;
+    border: 0;
+    font-size: 14px;
+    border-radius: 5px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+/* 回复评论 */
+
+.comment_replyBox {
+    position: absolute;
+    display: none;
+    bottom: 0px;
+    height: 200px;
+    width: 100%;
+    background-color: red;
+}

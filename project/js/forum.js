@@ -23,15 +23,15 @@ topBar_createTalking.addEventListener("click", function() {
     window.location = "createTalking.html";
 });
 
-//打开删除动态
-topBar_deleteTalking.addEventListener("click", function() {
-    window.location = "deleteTalking.html";
-});
-
 //打开个人信息
 submenu_username.addEventListener("click", function() {
     window.location = 'personalMessage.html';
 });
+
+// 打开个人相册
+submenu_photoAlbum.addEventListener("click", function() {
+    window.location = 'photoAlbum.html';
+})
 
 // 退出登录 同时清除cookie内账号数据
 submenu_logOut.onclick = function() {

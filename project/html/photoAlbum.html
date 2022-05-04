@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="../css/photoAlbum.css">
     <title>个人相册</title>
 </head>
 
@@ -21,7 +22,6 @@
                     <li><a href="#" class="topBar_allTalking">所有动态</a></li>
                     <li><a href="#" class="topBar_hotTalking">热门动态</a></li>
                     <li><a href="#" class="topBar_createTalking">新建动态</a></li>
-                    <li><a href="#" class="topBar_deleteTalking">删除动态</a></li>
                 </ul>
                 <div class="topBar_searchBox">
                     <input type="text" placeholder="搜索动态" class="topBar_search">
@@ -36,12 +36,51 @@
                         <li class="submenu_logOut"><a href="#">退出登录</a></li>
                     </ul>
                 </div>
-                <div class="changeTheme">
-                    <span class="changeTheme_text">切换黑夜模式</span>
-                    <img src="../image/Alogo-font.png" alt="" class="changeTheme_img">
-                </div>
             </div>
         </div>
+        <div class="photoAlbum_backgound">
+            <!-- 相册首页 -->
+            <div class="photoAlbum_box">
+                <div class="photoAlbum_title">
+                    个人相册
+                </div>
+                <div class="photoAlbum_createButton">新建相册</div>
+                <div class="photoAlbum_wrap"></div>
+            </div>
+            <!-- 新建相册 -->
+            <div class="photoAlbum_createBox" style="display: none;">
+                <div class="photoAlbum_createTitle">
+                    新建相册
+                </div>
+                <input type="text" class="photoAlbum_name" placeholder="请输入相册名">
+                <textarea class="photoAlbum_introduction" cols="30" rows="10" placeholder="简要介绍一下你的相册吧~"></textarea>
+                <button class="photoAlbum_button">确认新建</button>
+                <a href="#" class="returnPhotoAlbum">返回相册首页</a>
+            </div>
+            <!-- 相册图片 -->
+            <div class="photo_box">
+                <div class="photo_Title"></div>
+                <div class="photo_createButton">添加图片</div>
+                <div class="photo_returnButton">返回相册</div>
+                <div class="photo_wrap"></div>
+            </div>
+            <!-- 添加图片 -->
+            <div class="photo_createBox">
+                <div class="photo_createTitle">添加图片</div>
+                <button class="photo_button">确认添加</button>
+                <input type="file" class="inputPhoto" multiple="mutiple">
+                <div class="inputPhotoBox"></div>
+                <a href="#" class="photoReturnPhotoAlbum">返回相册</a>
+            </div>
+        </div>
+        <div id="bottom">Designed By HYF</div>
+    </div>
+    <script src="../js/allElements.js"></script>
+    <script src="../js/ajaxFunction.js"></script>
+    <script src="../js/cookieFunction.js"></script>
+    <script src="../js/photoAlbum.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/forum.js"></script>
 </body>
 
 </html>

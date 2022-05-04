@@ -1,3 +1,8 @@
+// 设置用户信息和头像
+if (getCookie("password") != '') {
+    topBar_userHeadImg.src = "http://" + getCookie("headImg");
+    topBar_username.innerHTML = getCookie("username");
+}
 // 上传动态图片 
 createTalking_imgButton.addEventListener("change", function() {
     let url = window.URL.createObjectURL(createTalking_imgButton.files[0]);
@@ -12,7 +17,6 @@ createTalking_button.addEventListener("click", function() {
     formdata.append('title', createTalking_title.value);
     formdata.append('content', createTalking_content.value);
     formdata.append('img', createTalking_imgButton.files[0]);
-    console.log(createTalking_imgButton.files[0]);
     let xhr = new XMLHttpRequest();
     xhr.open('post', 'http://175.178.51.126:8091/smallA/insertDiary', true);
     xhr.send(formdata);
@@ -26,9 +30,3 @@ createTalking_button.addEventListener("click", function() {
         }
     }
 });
-
-// 设置用户信息和头像
-if (getCookie("password") != '') {
-    topBar_userHeadImg.src = "http://" + getCookie("headImg");
-    topBar_username.innerHTML = getCookie("username");
-}
