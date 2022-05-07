@@ -175,4 +175,9 @@ forum_container.addEventListener("click", function(e) {
             }
         })
     };
+    // 跳转详情页
+    if (e.target.className == "forum_Viewmore") {
+        selectTalkingId = e.target.getAttribute("talkingId")
+        location.href = "concreteTalking.html?id=" + selectTalkingId;
+    };
 });

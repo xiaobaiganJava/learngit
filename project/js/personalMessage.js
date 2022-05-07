@@ -110,7 +110,6 @@ headImg_button.addEventListener("change", function() {
     let formdata = new FormData();
     formdata.append('username', getCookie("username"));
     formdata.append('headImg', headImg_button.files[0]);
-    console.log(headImg_button.files[0]);
     let xhr = new XMLHttpRequest();
     xhr.open('post', 'http://175.178.51.126:8091/smallA/uploadHeadImg', true);
     xhr.send(formdata);

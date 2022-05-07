@@ -71,6 +71,7 @@ var allHotTalking = function() {
                 // 添加删除个人动态按钮
                 if (uid == getCookie("id")) {
                     var deleteTalking = document.createElement('img');
+                    deleteTalking.setAttribute("did", tips.data.list[i].id);
                     deleteTalking.className = 'deleteTalking';
                     deleteTalking.src = '../image/shut.png';
                     forum_content.appendChild(deleteTalking);
@@ -153,7 +154,6 @@ forum_container.addEventListener("click", function(e) {
         selectUserId = e.target.getAttribute("data-id");
         location.href = 'personalHotTalking.html?id=' + selectUserId;
     }
-
     // 实现点赞和取消点赞功能
     if (e.target.className == "likeImg") {
         let tag = e.target.getAttribute("data-ifLike");
@@ -185,8 +185,8 @@ forum_container.addEventListener("click", function(e) {
     };
     // 删除个人动态
     if (e.target.className == "deleteTalking") {
-        deleteTalking.addEventListener("click", function() {
-            let deleteTalkingId = deleteTalking_id.value;
+        e.target.addEventListener("click", function() {
+            let deleteTalkingId = e.target.getAttribute("did");
             let deleteTalkingJSON = {
                 "id": deleteTalkingId
             };
@@ -196,16 +196,12 @@ forum_container.addEventListener("click", function(e) {
                 console.log(res);
                 if (tips.code === 200) {
                     alert('删除成功');
+                    allHotTalking();
                 } else {
                     alert('删除失败');
+                    allHotTalking();
                 }
             });
         });
-
-        // 设置用户信息和头像
-        if (getCookie("password") != '') {
-            topBar_userHeadImg.src = "http://" + getCookie("headImg");
-            topBar_username.innerHTML = getCookie("username");
-        }
     }
 });

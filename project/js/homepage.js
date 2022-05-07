@@ -22,6 +22,7 @@ if (getCookie("password") != '') {
     let forumLengthJSONString = JSON.stringify(forumLengthJSON);
     let lengthData = getJSON('POST', 'http://175.178.51.126:8091/smallA/selectAllDiary', forumLengthJSONString).then(res => {
         let tips = JSON.parse(res);
+        console.log(tips);
         maxLength = parseInt(tips.data.length);
         if (maxLength % itemSize != 0) {
             maxPage.innerHTML = (maxLength - maxLength % itemSize) / itemSize + 1;
@@ -73,6 +74,7 @@ var allTalking = function() {
                 // 添加删除个人动态按钮
                 if (uid == getCookie("id")) {
                     var deleteTalking = document.createElement('img');
+                    deleteTalking.setAttribute("did", tips.data.list[i].id);
                     deleteTalking.className = 'deleteTalking';
                     deleteTalking.src = '../image/shut.png';
                     forum_content.appendChild(deleteTalking);
@@ -285,7 +287,7 @@ forum_container.addEventListener("click", function(e) {
     };
     // 删除个人动态
     if (e.target.className == "deleteTalking") {
-        deleteTalking.addEventListener("click", function() {
+        e.target.addEventListener("click", function() {
             let deleteTalkingId = e.target.getAttribute("did");
             let deleteTalkingJSON = {
                 "id": deleteTalkingId
@@ -296,16 +298,12 @@ forum_container.addEventListener("click", function(e) {
                 console.log(res);
                 if (tips.code === 200) {
                     alert('删除成功');
+                    allTalking();
                 } else {
                     alert('删除失败');
+                    allTalking();
                 }
             });
         });
-
-        // 设置用户信息和头像
-        if (getCookie("password") != '') {
-            topBar_userHeadImg.src = "http://" + getCookie("headImg");
-            topBar_username.innerHTML = getCookie("username");
-        }
     }
 });

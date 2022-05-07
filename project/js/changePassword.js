@@ -91,10 +91,9 @@ changePassword_getCode.onclick = function() {
         let tips = JSON.parse(res)
         console.log(res); //获取响应报文
         if (tips.code == 200) {
-            alert('获取失败');
-        } else {
             alert('获取成功');
-            console.log(tips.msg);
+        } else {
+            alert('获取失败');
         }
     });
 }

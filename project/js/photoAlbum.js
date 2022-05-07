@@ -127,12 +127,14 @@ photoAlbum_wrap.addEventListener("click", function(e) {
 inputPhoto_button.addEventListener("click", function() {
     inputPhoto.click();
 });
+// 获取url
 inputPhoto.addEventListener("change", function() {
     let url = window.URL.createObjectURL(inputPhoto.files[0]);
     let str = '<img src = "' + url + '" class="eachphoto">';
     inputPhotoBox.innerHTML += str;
 
 });
+//上传图片
 photo_button.addEventListener("click", function() {
     let formdata = new FormData();
     formdata.append('uid', getCookie("id"));

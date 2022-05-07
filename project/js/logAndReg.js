@@ -196,16 +196,6 @@ login_personMessageButton.onclick = function() {
             setCookie("headImg", tips.data.headImg);
             // 去往主页
             window.location = "homepage.html";
-            // 获取展示个人信息部分
-            (function() {
-                PersonalMessage_Id.innerHTML = 'ID:' + tips.data.id;
-                PersonalMessage_username.innerHTML = '用户名:' + tips.data.username;
-                PersonalMessage_sex.innerHTML = '性别:' + tips.data.sex;
-                PersonalMessage_age.innerHTML = '年龄:' + tips.data.age;
-                PersonalMessage_phone.innerHTML = '手机:' + tips.data.phone;
-                PersonalMessage_email.innerHTML = '邮箱:' + tips.data.email;
-            })();
-
             // 清除登录的账号密码
             login_personMessage_username.value = "";
             login_personMessage_password.value = "";
