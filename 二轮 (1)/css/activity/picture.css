@@ -1,0 +1,180 @@
+
+.picture-wrapper{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+/* 添加图片的盒子 */
+.add {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+/*背景*/
+.add img{
+    width: 150px;
+    height: 150px;
+}
+
+/*相册盒子*/
+.photo_wrapper{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/*关闭图标*/
+.photo_wrapper i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.photo_wrapper img{
+    width: 150px;
+    height: 150px;
+}
+
+/*相册封面*/
+#photos{
+    width: 150px;
+    height: 150px;
+}
+
+
+
+/* 输入相册信息 */
+.ensure{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 350px;
+    background-color: white;
+    display: none;
+}
+
+.ensure i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+}
+
+.ensure textarea{
+    margin-top: 50px;
+    width: 400px;
+    height: 50px;
+    outline: none;
+    background-color: #f3f3f3;
+}
+
+.ensure button{
+    width: 20%;
+    height: 40px;
+    border-radius: 16px;
+    color: white;
+    background-color: rgb(137, 137, 241);
+    margin: 20px 40%;
+    cursor: pointer;
+}
+
+.ensure span{
+    position: relative;
+    top: -15px;
+}
+
+/*相册盒子里*/
+.album-box{
+    position: absolute;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    margin: auto;
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(237, 219, 219);
+    overflow-y: scroll;
+}
+
+.album-box i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/*隐藏input*/
+#add-file{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+    opacity: 0;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+/*添加的图标*/
+#add-li{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/*图标和input的盒子*/
+#addimg {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* 相册里的每张图片 */
+.album-box img{
+    width: 150px;
+    height: 150px;
+}
+
+/*确认上传的按钮*/
+#album-upload{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: rgb(144, 144, 227);
+    cursor: pointer;
+}
+
+.photo-box{
+    width: auto;
+    height: auto;
+}
+
+
+.photo-box li{
+    position: relative;
+    left: 20px;
+    top: 20px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 20px 20px 0 0;
+}

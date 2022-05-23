@@ -1,0 +1,29 @@
+.delete-user{
+    position: absolute;
+    top: 50px;
+    left: 35%;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    z-index: 99;
+    display: none;
+}
+
+.delete-user input{
+    width: 80%;
+    height: 80px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+
+.delete-user button{
+    width: 80%;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}

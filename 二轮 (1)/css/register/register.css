@@ -1,0 +1,170 @@
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.register-part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.box-body {
+    position: relative;
+    margin: 5% auto;
+    width: 600px;
+    height: 700px;
+    border-radius: 20px;
+    background: linear-gradient(
+        to bottom left,
+        rgba(165, 196, 9, 0.5),
+        rgba(199, 31, 168, 0.5),
+        rgba(117, 51, 117, 0.5)
+    );
+    backdrop-filter: blur(16px);
+    z-index: 99;
+}
+
+/*正面 登录面*/
+.front {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 1s ease-in-out;
+
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.front .ways {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    display: flex;
+    align-content: space-between;
+}
+
+.front .ways a {
+    font-size: 20px;
+    width: 50%;
+}
+
+.change {
+    border-bottom: solid rgba(35, 164, 219, 0.5) 2px;
+}
+
+.inputs {
+    width: 100%;
+    height: 90%;
+}
+
+/*用用户名登录的输入框*/
+.inputs-name {
+    position: absolute;
+}
+
+.sevendays {
+
+    width: 100%;
+    font-size: 16px;
+    color: white;
+}
+
+/*使用邮箱登录*/
+.inputs-email {
+    position: absolute;
+    display: none;
+}
+
+/*背面 注册面*/
+.back-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*翻转属性*/
+    transform: rotateY(180deg) translateZ(50px);
+    backface-visibility: hidden;
+    transition: 1s ease;
+
+    width: 80%;
+    height: auto;
+}
+
+.back{
+    width: 90%;
+    position: absolute;
+    padding-top: 50px;
+}
+
+/*注册两字*/
+.back a:first-child{
+    position: relative;
+    left: 46%;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/*报错*/
+.back label{
+    color: white;
+    font-size: 12px;
+    display: none;
+}
+
+/*切换登录*/
+.back a:last-child{
+    position: relative;
+    left: 38%;
+}
+
+
+/*正反面统一样式*/
+.back input,
+.back button,
+.inputs-email input,
+.inputs-email button,
+.inputs-name input,
+.inputs-name button {
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+    margin-top: 5%;
+}
+
+.back input,
+.inputs-email input,
+.inputs-name input {
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+
+/*placehodler*/
+.back input::-webkit-input-placeholder,
+.inputs-email input::-webkit-input-placeholder,
+.inputs-name input::-webkit-input-placeholder{
+    color: rgba(35, 33, 33, 0.6);
+}
+
+.back button,
+.inputs-email button,
+.inputs-name button {
+    border-radius: 16px;
+    color: white;
+    background: linear-gradient(
+        to right,
+        rgb(85, 85, 196),
+        rgb(122, 122, 234),
+        rgb(126, 126, 237)
+    );
+    cursor: pointer;
+}
+
+

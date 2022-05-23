@@ -69,6 +69,7 @@ function updatePhotoAlbum() {
     let PhotoAlbumJSONString = JSON.stringify(searchPhotoAlbumJSON);
     let PhotoAlbumData = getJSON('POST', 'http://175.178.51.126:8091/smallA/selectAlbumByUid', PhotoAlbumJSONString).then(res => {
         let tips = JSON.parse(res);
+        console.log(tips);
         // 预载好用户id返回的相册信息，然后更新全局变量userPhotoId,每次调用都可以更新
         userPhotoId = tips;
         if (tips.code >= 200 && tips.code < 300) {
@@ -115,7 +116,7 @@ photoAlbum_wrap.addEventListener("click", function(e) {
                     photoAlbum_box.style.display = 'none';
                     photo_box.style.display = 'block';
                     photo_wrap.innerHTML = photo_wrap.innerHTML + ` <div class = "eachPhoto_box"><div class="photo"><img src="http://${userPhotoId.data[i].photos[j].img}" alt="" class="eachphoto">
-                    <a href="#" class="deletePhoto" data-delphotoid=${userPhotoId.data[i].photos[j].img}></a></div>`
+                    <a href="#" class="deletePhoto" data-delphotoid=${userPhotoId.data[i].photos[j].id}></a></div>`
                 }
             }
         }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/activity/nav.css">
+    <link rel="stylesheet" href="/font_3360973_ylzmjfy3lk/iconfont.css">
+    <link rel="stylesheet" href="/css/activity/write.css">
+    <script src="/cookie.js"></script>
+    <script src="/ajax.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li id="nav-remark">动态</li>
+            <li id="nav-hot">热门</li>
+            <li id="nav-write">发布</li>
+            <li id="pictures">相册</li>
+            <li id="nav-input">
+                <input type="text" placeholder="请输入搜索内容" id="search">
+                <button id="search-btn">搜索</button>
+            </li>
+            <li id="headbox">
+                <img src="" alt="" id="nav-headImg">
+                <span id="nav-name"></span>
+            </li>
+        </ul>
+    </div>
+    <!-- 发布动态 -->
+    <div class="activity-write" id="activity-write">
+        <div class="activity-writewrapper" id="activity-writewrapper">
+            <div class="activity-writeitem" id="activity-writeitem">
+                <p><textarea cols="2" rows="20" placeholder="请输入你的动态标题" style="resize: none;"
+                        id="a-writetitle"></textarea></p>
+                <p><textarea cols="20" rows="20" placeholder="请输入你的动态内容" style="resize: none;"
+                        id="a-writecontent"></textarea></p>
+                <div id="write-imgs">
+                    <div class="inputbox" id="inputbox">
+                        <img src="/img/add.jpg" alt="" id="addback">
+                        <input type="file" multiple="multiple" id="a_upload" />
+                        <div class="w_image" id="w_image"></div>
+                    </div>
+                </div>
+                <div class="issuance">
+                    <button id="issuance-btn">发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/activity/write.js"></script>
+</body>
+</html>

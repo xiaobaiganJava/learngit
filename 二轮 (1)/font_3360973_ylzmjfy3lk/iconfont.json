@@ -1,0 +1,23 @@
+{
+  "id": "3360973",
+  "name": "小A二轮",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1108",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7008956",
+      "name": "like",
+      "font_class": "like",
+      "unicode": "e707",
+      "unicode_decimal": 59143
+    }
+  ]
+}

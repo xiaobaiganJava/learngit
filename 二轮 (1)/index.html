@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_3360973_ylzmjfy3lk/iconfont.css">
+    <link rel="stylesheet" href="./css/register/register.css">
+    <link rel="stylesheet" href="./css/register/delete.css">
+    <link rel="stylesheet" href="./css/register/change-password.css">
+    <link rel="stylesheet" href="./css/register/alertbox.css">
+    <script src="/cookie.js"></script>
+</head>
+
+<body>
+    <div class="register-part">
+        <div class="box-body">
+            <!-- 登陆注册  -->
+            <div class="front" id="front">
+                <!-- 登录 -->
+                <h1 style="width: 200px; margin: 10px auto; color: white;">小A论坛登录</h1>
+                <div class="ways">
+                    <a href="javascript:;" id="resignByName">用户名登陆</a>
+                    <a href="javascript:;" id="resignByEmail">邮箱登录</a>
+                </div>
+                <div class="inputs">
+                    <div class="inputs-name" id="Byname">
+                        <input type="text" placeholder="用户名" id="name-name">
+                        <input type="password" placeholder="登陆密码" id="name-password">
+                        <button id="name-button">登录</button>
+                        <a href="javascript:;" id="switch_1">立即注册</a>
+                        <div>
+                            <p id="changepwd">修改密码</p>
+                        </div>
+                        <div>
+                            <p id="delete-user1">删除账号</p>
+                        </div>
+                        <div class="sevendays">
+                            七天免登录<input type="checkbox" id="free1"
+                                style="width: 15px; height: 15px; display: inline-block;">
+                        </div>
+                    </div>
+                    <div class="inputs-email" id="Byemail">
+                        <input type="text" placeholder="登陆邮箱" id="email-email">
+                        <input type="password" placeholder="登陆密码" id="email-password">
+                        <button id="email-button">登录</button>
+                        <a href="javascript:;" id="switch_11">立即注册</a>
+                        <div>
+                            <p id="changepwd1">修改密码</p>
+                        </div>
+                        <div>
+                            <p id="delete-user2">删除账号</p>
+                        </div>
+                        <div class="sevendays">
+                            七天免登录<input type="checkbox" id="free2"
+                                style="width: 15px; height: 15px; display: inline-block;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 注册 -->
+            <div class="back-wrapper" id="back-wrapper">
+                <div class="back">
+                    <a href="javascript:;">注册</a>
+                    <input type="text" placeholder="用户名" id="register-name">
+                    <input type="text" placeholder="邮箱地址" id="register-email">
+                    <label>请输入正确的信息</label>
+                    <input type="password" placeholder="登陆密码" id="register-password">
+                    <label>请输入6-18位数字,字符</label>
+                    <input type="password" placeholder="请再输入一次密码" id="register-passagain">
+                    <label>与第一次输入有误 </label>
+                    <button>确认注册</button>
+                    <a href="javascript:;" id="switch_2">已有帐号，立刻登录</a>
+                </div>
+            </div>
+            <!-- 修改密码  -->
+            <div class="changepassword" id="changepassword">
+                <div class="icon">
+                    <i class="iconfont" id="icon1">&#xe600;</i>
+                </div>
+                <div class="changeways">
+                    <a href="javascript:;" id="changeByName">使用用户名修改</a>
+                    <a href="javascript:;" id="changeByEmail">使用邮箱修改</a>
+                </div>
+                <div class="change-input">
+                    <div class="changepwdByname">
+                        <input type="text" placeholder="请输入你的用户名" id="cname">
+                        <input type="password" placeholder="请输入你的旧密码" id="coldpassword">
+                        <input type="password" placeholder="请输入你的新密码" id="cnewpassword">
+                        <label>请输入6-18位数字，字符</label>
+                        <input type="password" placeholder="请再输入一次的你的新密码" id="cagainnewpassword">
+                        <label>请与第一次输入一致</label>
+                        <button id="changepassword-btn">确认修改</button>
+                    </div>
+                    <div class="changepwdByemail">
+                        <input type="email" placeholder="请输入你的邮箱地址" id="cemail">
+                        <label>请输入正确的邮箱格式</label>
+                        <input type="password" placeholder="请输入你的新密码" id="cnewpassword1">
+                        <label>请输入6-18位数字，字符</label>
+                        <input type="password" placeholder="请再输入一次的你的新密码" id="cagainnewpassword1">
+                        <label>请与第一次输入一致</label>
+                        <div class="identifycode">
+                            <input type="text" placeholder="请输入验证码" id="code">
+                            <button id="identify-code">发送验证码</button>
+                        </div>
+                        <button id="changepassword-btn1">确认修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 销号区 -->
+        <div class="delete-user">
+            <input type="text" placeholder="用户名" id="delete-name">
+            <input type="text" placeholder="邮箱地址" id="delete-email">
+            <input type="password" placeholder="登陆密码" id="delete-password">
+            <button id="delete0">确定</button>
+            <button id="closed">关闭</button>
+        </div>
+    </div>
+    <!-- 弹出窗口 -->
+    <div class="alertwrapper">
+        <div class="alert-box">
+            <div class="icon">
+                <i class="iconfont" id="icon">&#xe600;</i>
+            </div>
+            <div class="content">
+                <p id="alert-content"></p>
+                <button id="alert-btn">确定</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/register/register.js"></script>
+    <script src="./js/register/change-password.js"></script>
+    <script src="./js/register/sevenfree.js"></script>
+</body>
+
+</html>

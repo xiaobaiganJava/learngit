@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/activity/activity.css">
+    <link rel="stylesheet" href="/css/activity/nav.css">
+    <link rel="stylesheet" href="/font_3360973_ylzmjfy3lk/iconfont.css">
+    <link rel="stylesheet" href="/css/activity/user.css">
+    <link rel="stylesheet" href="/css/activity/picture.css">
+    <link rel="stylesheet" href="/css/activity/page.css">
+    <script src="/ajax.js"></script>
+    <script src="/cookie.js"></script>
+    <script src="/concrete.js"></script>
+    <script src="/details.js"></script>
+    <script src="/likes.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li id="nav-remark">动态</li>
+            <li id="nav-hot">热门</li>
+            <li id="nav-write">发布</li>
+            <li id="pictures">相册</li>
+            <li id="nav-input">
+                <input type="text" placeholder="请输入搜索内容" id="search">
+                <button id="search-btn">搜索</button>
+            </li>
+            <li id="headbox">
+                <img src="" alt="" id="nav-headImg">
+                <span id="nav-name"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="activity-wrapper">
+        <div class="activity">
+            <ul class="activity-ul">
+            </ul>
+        </div>
+    </div>
+    <!-- 详情 -->
+    <div class="paticular-wrapper">
+        <div class="particular" style="position: relative;">
+            <button id="goback" style="display: none;">返回</button>
+            <ul class="particular-ul">
+            </ul>
+        </div>
+    </div>
+    <div class="picture-wrapper" id="picture-wrapper">
+    </div>
+    <div class="album-box" style="display: none;">
+        <div class="addimg" id="addimg">
+            <input type="file" id="add-file" multiple>
+            <img src="./img/a.png" alt="" id="add-li">
+        </div>
+        <ul class="photo-box" id="photo-box"></ul>
+        <i class="iconfont" style="cursor: pointer;" onclick="closethis()">&#xe600;</i>
+        <button id="album-upload">上传图片</button>
+    </div>
+    <div class="pages-box" id="pages-box">
+        <ul class="pages" id="pages"></ul>
+    </div>
+    <script src="/js/activity/oneuser.js"></script>
+</body>
+
+</html>

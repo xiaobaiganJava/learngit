@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/activity/activity.css">
+    <link rel="stylesheet" href="/css/activity/nav.css">
+    <link rel="stylesheet" href="/font_3360973_ylzmjfy3lk/iconfont.css">
+    <link rel="stylesheet" href="/css/activity/user.css">
+    <link rel="stylesheet" href="/css/activity/page.css">
+    <script src="/ajax.js"></script>
+    <script src="/cookie.js"></script>
+    <script src="/concrete.js"></script>
+    <script src="/details.js"></script>
+    <script src="/likes.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li id="nav-remark">动态</li>
+            <li id="nav-hot">热门</li>
+            <li id="nav-write">发布</li>
+            <li id="pictures">相册</li>
+            <li id="nav-input">
+                <input type="text" placeholder="请输入搜索内容" id="search">
+                <button id="search-btn">搜索</button>
+            </li>
+            <li id="headbox">
+                <img src="" alt="" id="nav-headImg">
+                <span id="nav-name"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="user">
+        <i class="iconfont" style="cursor: pointer; position: absolute; right: 5px; top: 5px;"
+            onclick="closeuser()">&#xe600;</i>
+        <div class="uimg">
+            <input type="file" id="uimgupload">
+            <img src="" alt="" id="userImg">
+            <button id="uimg-btn">上传头像</button>
+        </div>
+        <div class="user-message"><span>id:</span><input type="text" readonly id="userid1"></div>
+        <div class="user-message"><span>useremail:</span><input type="text" readonly id="useremail1"></div>
+        <div class="user-message"><span>username:</span><input type="text" readonly id="username1"></div>
+        <div class="user-message"><span>age</span><input type="text" readonly id="userage1"></div>
+        <div class="user-message"><span>phone</span><input type="text" readonly id="userphone1"></div>
+        <div class="user-message"><span>sex</span><input type="text" readonly id="usersex1"></div>
+        <button id="change-message">修改个人信息</button>
+        <button id="finish-change">完成修改</button>
+        <button id="exit">exit</button>
+    </div>
+    <div class="activity-wrapper">
+        <div class="activity">
+            <ul class="activity-ul">
+            </ul>
+        </div>
+    </div>
+    <!-- 详情 -->
+    <div class="paticular-wrapper">
+        <div class="particular" style="position: relative;">
+            <button id="goback" style="display: none;">返回</button>
+            <ul class="particular-ul">
+            </ul>
+        </div>
+    </div>
+    <div class="pages-box" id="pages-box">
+        <ul class="pages" id="pages"></ul>
+    </div>
+    <script src="/delete.js"></script>
+    <script src="/js/activity/userdetail.js"></script>
+</body>
+
+</html>

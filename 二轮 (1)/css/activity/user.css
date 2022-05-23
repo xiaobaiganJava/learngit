@@ -1,0 +1,93 @@
+.user{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(
+        to bottom left,
+        rgba(165, 196, 9, 0.5),
+        rgba(199, 31, 168, 0.5),
+        rgba(117, 51, 117, 0.5)
+    );
+    text-align: center;
+    display: none;
+    z-index: 999;
+}
+
+/*用户属性*/
+.user span{
+    display: inline-block;
+    width: 90px;
+}
+
+/*用户信息*/
+.user .user-message{
+    margin: 10px;
+    height: 22px;
+}
+
+.user .uimg img{
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.user input{
+    height: 20px;
+    background-color: transparent;
+    color: black;
+    outline:none;
+    margin-top: 15px;
+    padding-top: 2px;
+}
+
+/*修改用户信息*/
+.user #change-message{
+    margin-top: 40px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/*完成修改的按钮*/
+.user #finish-change{
+    margin: 20px auto 0px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+/*修改用户信息时用户信息的样式*/
+.user .input-change{
+    border-bottom: 2px solid black;
+}
+
+
+/*退出登录*/
+.user #exit{
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    width: 40px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+
+/*销号样式*/
+.user #delete{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    width: 40px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
